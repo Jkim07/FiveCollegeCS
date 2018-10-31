@@ -12,6 +12,13 @@
 		EF31CD6921868DE600D72E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31CD6721868DE600D72E36 /* Main.storyboard */; };
 		EF31CD6B21868DEA00D72E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF31CD6A21868DEA00D72E36 /* Assets.xcassets */; };
 		EF31CD6E21868DEA00D72E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31CD6C21868DEA00D72E36 /* LaunchScreen.storyboard */; };
+		EFF0F07721869C280061E2A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0F07621869C280061E2A4 /* LoginViewController.swift */; };
+		EFF0F07921869C880061E2A4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0F07821869C880061E2A4 /* SignUpViewController.swift */; };
+		EFF0F07B2186A80F0061E2A4 /* passwordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0F07A2186A80F0061E2A4 /* passwordViewController.swift */; };
+		EFF0F07D2186AC9A0061E2A4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0F07C2186AC9A0061E2A4 /* FeedViewController.swift */; };
+		EFF0F07F2186B5EB0061E2A4 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0F07E2186B5EB0061E2A4 /* FilterViewController.swift */; };
+		EFF0F0822186B7260061E2A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0F0812186B7260061E2A4 /* ProfileViewController.swift */; };
+		EFF0F0842186B77E0061E2A4 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0F0832186B77E0061E2A4 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		EF31CD6A21868DEA00D72E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF31CD6D21868DEA00D72E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF31CD6F21868DEA00D72E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFF0F07621869C280061E2A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EFF0F07821869C880061E2A4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EFF0F07A2186A80F0061E2A4 /* passwordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordViewController.swift; sourceTree = "<group>"; };
+		EFF0F07C2186AC9A0061E2A4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		EFF0F07E2186B5EB0061E2A4 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		EFF0F0812186B7260061E2A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EFF0F0832186B77E0061E2A4 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +69,16 @@
 			isa = PBXGroup;
 			children = (
 				EF31CD6321868DE600D72E36 /* AppDelegate.swift */,
+				EFF0F07621869C280061E2A4 /* LoginViewController.swift */,
+				EFF0F07821869C880061E2A4 /* SignUpViewController.swift */,
+				EFF0F0812186B7260061E2A4 /* ProfileViewController.swift */,
 				EF31CD6521868DE600D72E36 /* ViewController.swift */,
 				EF31CD6721868DE600D72E36 /* Main.storyboard */,
+				EFF0F07C2186AC9A0061E2A4 /* FeedViewController.swift */,
 				EF31CD6A21868DEA00D72E36 /* Assets.xcassets */,
+				EFF0F0832186B77E0061E2A4 /* AddViewController.swift */,
+				EFF0F07E2186B5EB0061E2A4 /* FilterViewController.swift */,
+				EFF0F07A2186A80F0061E2A4 /* passwordViewController.swift */,
 				EF31CD6C21868DEA00D72E36 /* LaunchScreen.storyboard */,
 				EF31CD6F21868DEA00D72E36 /* Info.plist */,
 			);
@@ -135,8 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF0F07F2186B5EB0061E2A4 /* FilterViewController.swift in Sources */,
+				EFF0F07721869C280061E2A4 /* LoginViewController.swift in Sources */,
+				EFF0F0842186B77E0061E2A4 /* AddViewController.swift in Sources */,
 				EF31CD6621868DE600D72E36 /* ViewController.swift in Sources */,
+				EFF0F07921869C880061E2A4 /* SignUpViewController.swift in Sources */,
 				EF31CD6421868DE600D72E36 /* AppDelegate.swift in Sources */,
+				EFF0F07D2186AC9A0061E2A4 /* FeedViewController.swift in Sources */,
+				EFF0F0822186B7260061E2A4 /* ProfileViewController.swift in Sources */,
+				EFF0F07B2186A80F0061E2A4 /* passwordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
