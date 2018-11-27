@@ -33,7 +33,7 @@
                                 <color key="textColor" red="0.011764705882352941" green="0.098039215686274508" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="  Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kyn-SQ-09p">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kyn-SQ-09p">
                                 <rect key="frame" x="16" y="252" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.93725490196078431" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -42,8 +42,11 @@
                                 <color key="textColor" red="0.58720651223574793" green="0.58288326783294997" blue="0.57674961897655519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                <connections>
+                                    <action selector="addUser" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Z4d-R8-0SA"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="  Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4oR-Is-Fhh">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4oR-Is-Fhh">
                                 <rect key="frame" x="16" y="300" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -51,7 +54,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.58720651219999997" green="0.58288326779999999" blue="0.57674961899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKy-ax-wuE">
                                 <rect key="frame" x="251" y="338" width="108" height="28"/>
@@ -73,6 +76,7 @@
                                     <color key="titleColor" red="0.01176470588" green="0.098039215690000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PzA-ig-zV0"/>
                                     <segue destination="r3L-5J-6eT" kind="show" id="998-4w-klv"/>
                                 </connections>
                             </button>
@@ -131,6 +135,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="kyn-SQ-09p" id="GyP-Au-4c8"/>
+                        <outlet property="loginButton" destination="21L-5X-soa" id="qPt-dJ-WRF"/>
+                        <outlet property="password" destination="4oR-Is-Fhh" id="6is-n4-ygD"/>
+                        <outlet property="signUpButton" destination="k0g-2Y-bHj" id="DPj-in-qRx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="EEE-9D-2Cu" userLabel="Exit" sceneMemberID="exit"/>
@@ -156,6 +166,9 @@
                                 <color key="textColor" red="0.58720651219999997" green="0.58288326779999999" blue="0.57674961899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailInput:" destination="j8v-e0-4yG" eventType="editingDidEnd" id="c5t-54-edZ"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a valid email." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0su-MD-d47">
                                 <rect key="frame" x="16" y="204" width="147" height="15"/>
@@ -170,6 +183,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="emailButton:" destination="j8v-e0-4yG" eventType="touchUpInside" id="tV7-Na-uKB"/>
                                     <segue destination="0NK-58-jVL" kind="show" id="Q5y-x6-zZy"/>
                                 </connections>
                             </button>
@@ -216,6 +230,10 @@
                         <viewLayoutGuide key="safeArea" id="8ni-8E-xEe"/>
                     </view>
                     <navigationItem key="navigationItem" id="F0Y-J3-xgL"/>
+                    <connections>
+                        <outlet property="emailButton" destination="XAO-3A-ghC" id="Ldn-0a-7vg"/>
+                        <outlet property="emailInput" destination="vmo-aD-feX" id="liE-wM-9N0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYf-ta-2rw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,6 +272,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="passwordButton:" destination="0NK-58-jVL" eventType="touchUpInside" id="V32-Ve-zwW"/>
                                     <segue destination="E01-Bk-Ghr" kind="show" id="QoB-KX-hay"/>
                                 </connections>
                             </button>
@@ -296,6 +315,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="va1-y2-aWm"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordInput" destination="IcO-KA-lJh" id="cG2-wW-Qdu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nlv-lc-hco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -343,6 +365,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="doneButton:" destination="Tba-6i-xky" eventType="touchUpInside" id="ASg-kQ-Ag1"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="eOj-eI-tPj"/>
                                 </connections>
                             </button>
@@ -430,6 +453,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3U-er-vXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Tba-6i-xky" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1925.5999999999999" y="921.58920539730138"/>
         </scene>
@@ -1174,11 +1198,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="998-4w-klv"/>
-        <segue reference="D0r-yn-QqE"/>
+        <segue reference="9tV-Xw-9Va"/>
         <segue reference="iPR-Hp-Isj"/>
         <segue reference="qXF-EC-Hwm"/>
         <segue reference="NkX-ID-aqL"/>
-        <segue reference="Xac-Fd-YBZ"/>
+        <segue reference="JDG-8A-DkQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.45396765020000002" blue="0.38829500039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

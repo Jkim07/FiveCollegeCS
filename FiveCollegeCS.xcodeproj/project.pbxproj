@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E61388B21A8995A00ED1F82 /* myData.db in Resources */ = {isa = PBXBuildFile; fileRef = 4E61388A21A8995A00ED1F82 /* myData.db */; };
+		4E61388D21A899EA00ED1F82 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E61388C21A899EA00ED1F82 /* libsqlite3.0.tbd */; };
+		4E61389521ACC8FD00ED1F82 /* database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61389421ACC8FC00ED1F82 /* database.swift */; };
 		EF31CD6421868DE600D72E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31CD6321868DE600D72E36 /* AppDelegate.swift */; };
 		EF31CD6621868DE600D72E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31CD6521868DE600D72E36 /* ViewController.swift */; };
 		EF31CD6921868DE600D72E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31CD6721868DE600D72E36 /* Main.storyboard */; };
@@ -22,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E61388A21A8995A00ED1F82 /* myData.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = myData.db; sourceTree = "<group>"; };
+		4E61388C21A899EA00ED1F82 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		4E61389021A8C84B00ED1F82 /* FiveCollegeCS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FiveCollegeCS-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E61389421ACC8FC00ED1F82 /* database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = database.swift; sourceTree = "<group>"; };
 		EF31CD6021868DE600D72E36 /* FiveCollegeCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiveCollegeCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF31CD6321868DE600D72E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF31CD6521868DE600D72E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,17 +50,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E61388D21A899EA00ED1F82 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E04526D21A30A9300081907 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E61388C21A899EA00ED1F82 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF31CD5721868DE600D72E36 = {
 			isa = PBXGroup;
 			children = (
 				EF31CD6221868DE600D72E36 /* FiveCollegeCS */,
 				EF31CD6121868DE600D72E36 /* Products */,
+				4E04526D21A30A9300081907 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +85,8 @@
 		EF31CD6221868DE600D72E36 /* FiveCollegeCS */ = {
 			isa = PBXGroup;
 			children = (
+				4E61389421ACC8FC00ED1F82 /* database.swift */,
+				4E61388A21A8995A00ED1F82 /* myData.db */,
 				EF31CD6321868DE600D72E36 /* AppDelegate.swift */,
 				EFF0F07621869C280061E2A4 /* LoginViewController.swift */,
 				EFF0F07821869C880061E2A4 /* SignUpViewController.swift */,
@@ -81,6 +100,7 @@
 				EFF0F07A2186A80F0061E2A4 /* passwordViewController.swift */,
 				EF31CD6C21868DEA00D72E36 /* LaunchScreen.storyboard */,
 				EF31CD6F21868DEA00D72E36 /* Info.plist */,
+				4E61389021A8C84B00ED1F82 /* FiveCollegeCS-Bridging-Header.h */,
 			);
 			path = FiveCollegeCS;
 			sourceTree = "<group>";
@@ -117,6 +137,7 @@
 				TargetAttributes = {
 					EF31CD5F21868DE600D72E36 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -144,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF31CD6E21868DEA00D72E36 /* LaunchScreen.storyboard in Resources */,
+				4E61388B21A8995A00ED1F82 /* myData.db in Resources */,
 				EF31CD6B21868DEA00D72E36 /* Assets.xcassets in Resources */,
 				EF31CD6921868DE600D72E36 /* Main.storyboard in Resources */,
 			);
@@ -164,6 +186,7 @@
 				EF31CD6421868DE600D72E36 /* AppDelegate.swift in Sources */,
 				EFF0F07D2186AC9A0061E2A4 /* FeedViewController.swift in Sources */,
 				EFF0F0822186B7260061E2A4 /* ProfileViewController.swift in Sources */,
+				4E61389521ACC8FD00ED1F82 /* database.swift in Sources */,
 				EFF0F07B2186A80F0061E2A4 /* passwordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF976G5ZGC;
 				INFOPLIST_FILE = FiveCollegeCS/Info.plist;
@@ -317,6 +341,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mikeythebadass.FiveCollegeCS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FiveCollegeCS/FiveCollegeCS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -326,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF976G5ZGC;
 				INFOPLIST_FILE = FiveCollegeCS/Info.plist;
@@ -335,6 +362,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mikeythebadass.FiveCollegeCS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FiveCollegeCS/FiveCollegeCS-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
