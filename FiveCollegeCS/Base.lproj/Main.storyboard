@@ -901,11 +901,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="riE-uL-Eq4">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riE-uL-Eq4">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="4bA-si-R0A"/>
                                     <constraint firstAttribute="height" constant="44" id="TAe-6m-CvV"/>
                                     <constraint firstAttribute="width" constant="375" id="VPR-QV-Nx5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="k6t-8o-FVg"/>
                                 </constraints>
                                 <items>
                                     <navigationItem title="Five College CS" id="2gW-SQ-jLO">
@@ -988,10 +990,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1Uz-GE-K8p" firstAttribute="leading" secondItem="kEB-Jc-xda" secondAttribute="leading" id="0Hb-io-tLs"/>
+                            <constraint firstItem="riE-uL-Eq4" firstAttribute="trailing" secondItem="kEB-Jc-xda" secondAttribute="trailing" id="2fz-Lk-V2M"/>
                             <constraint firstItem="dBb-fe-gqO" firstAttribute="top" secondItem="riE-uL-Eq4" secondAttribute="bottom" constant="6" id="4UV-Zk-ueb"/>
+                            <constraint firstItem="dBb-fe-gqO" firstAttribute="top" secondItem="riE-uL-Eq4" secondAttribute="bottom" constant="6" id="Avk-cM-xdh"/>
+                            <constraint firstItem="riE-uL-Eq4" firstAttribute="top" secondItem="kEB-Jc-xda" secondAttribute="top" id="NwI-Vd-xx9"/>
                             <constraint firstItem="1Uz-GE-K8p" firstAttribute="top" secondItem="dBb-fe-gqO" secondAttribute="bottom" constant="3" id="QjX-jC-j65"/>
                             <constraint firstItem="1Uz-GE-K8p" firstAttribute="bottom" secondItem="kEB-Jc-xda" secondAttribute="bottom" id="ZvF-Oi-HDZ"/>
                             <constraint firstItem="dBb-fe-gqO" firstAttribute="top" secondItem="riE-uL-Eq4" secondAttribute="bottom" constant="8" id="a3X-bg-qlt"/>
+                            <constraint firstItem="riE-uL-Eq4" firstAttribute="leading" secondItem="kEB-Jc-xda" secondAttribute="leading" id="cOQ-95-IlT"/>
                             <constraint firstItem="1Uz-GE-K8p" firstAttribute="top" secondItem="dBb-fe-gqO" secondAttribute="bottom" constant="3" id="dNE-5I-FVT"/>
                             <constraint firstItem="dBb-fe-gqO" firstAttribute="top" secondItem="riE-uL-Eq4" secondAttribute="bottom" constant="6" id="led-8i-m4u"/>
                             <constraint firstItem="riE-uL-Eq4" firstAttribute="top" secondItem="kEB-Jc-xda" secondAttribute="top" id="oFv-xv-vN8"/>
@@ -1240,7 +1246,8 @@
         <image name="social" width="200" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p8x-aV-4K5"/>
+        <segue reference="sIp-Cy-8cS"/>
+        <segue reference="DKC-HV-brk"/>
         <segue reference="9tV-Xw-9Va"/>
         <segue reference="iPR-Hp-Isj"/>
         <segue reference="Xac-Fd-YBZ"/>
