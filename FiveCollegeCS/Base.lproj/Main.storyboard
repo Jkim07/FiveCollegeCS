@@ -954,21 +954,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="academics" translatesAutoresizingMaskIntoConstraints="NO" id="r5q-KM-0FB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="academics" translatesAutoresizingMaskIntoConstraints="NO" id="r5q-KM-0FB">
                                 <rect key="frame" x="41" y="148" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ibZ-AX-HyM"/>
                                     <constraint firstAttribute="width" constant="44" id="x70-MV-ujH"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="careers" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-FP-kXI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="careers" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-FP-kXI">
                                 <rect key="frame" x="121" y="147" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="NeB-8c-KEF"/>
                                     <constraint firstAttribute="width" constant="42" id="jKc-6h-WSk"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="org" translatesAutoresizingMaskIntoConstraints="NO" id="yvH-p8-Lbt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="org" translatesAutoresizingMaskIntoConstraints="NO" id="yvH-p8-Lbt">
                                 <rect key="frame" x="198" y="149" width="56" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="HvQ-1a-zEI"/>
@@ -977,7 +977,7 @@
                                     <constraint firstAttribute="height" constant="40" id="yCg-XT-pbj"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social" translatesAutoresizingMaskIntoConstraints="NO" id="V6N-Wa-syK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social" translatesAutoresizingMaskIntoConstraints="NO" id="V6N-Wa-syK">
                                 <rect key="frame" x="276" y="149" width="63" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="8od-CX-MBZ"/>
