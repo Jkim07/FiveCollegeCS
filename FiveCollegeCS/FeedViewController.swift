@@ -13,6 +13,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     let myimages: [UIImage] = [#imageLiteral(resourceName: "careers"), #imageLiteral(resourceName: "academics"), #imageLiteral(resourceName: "social"), #imageLiteral(resourceName: "org"),#imageLiteral(resourceName: "org"), #imageLiteral(resourceName: "careers"), #imageLiteral(resourceName: "academics"), #imageLiteral(resourceName: "social"), #imageLiteral(resourceName: "careers")]
     
     let data = ["Coding Challenges", "Harambe Speaks","Robotics Club","Grace Hopper", "Women in Gaming","Amazon","UMass Hackathon", "Google Session","Video Game Team"]
+    
+    let subtitles = ["04/21 4:20pm", "04/20 6:00pm", "11/20 7:00pm", "12/09 8:00pm",
+    "05/09 7:10pm", "08/14 4:00pm","3/21 6:07pm","07/22 12:00pm","11/20 7:00pm"]
 
     @IBOutlet weak var table: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,10 +23,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+//        let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: "cell")
         
         cell.textLabel?.text = data[indexPath.row]
+        cell.detailTextLabel?.text = subtitles[indexPath.row]
         cell.imageView?.image = myimages[indexPath.row]
+        
         return(cell)
     }
     
