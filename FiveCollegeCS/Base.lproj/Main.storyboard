@@ -920,9 +920,6 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Y3t-5h-zSV" kind="show" id="QQa-zk-3tI"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1102,7 +1099,7 @@
         <image name="social" width="200" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="998-4w-klv"/>
+        <segue reference="DKC-HV-brk"/>
         <segue reference="9tV-Xw-9Va"/>
         <segue reference="iPR-Hp-Isj"/>
         <segue reference="dZf-fA-dej"/>
