@@ -980,11 +980,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Bkv-Gu-9xr" detailTextLabel="R9n-vv-Ghp" imageView="LS2-BR-Uy8" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="L7b-gO-kD1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="Bkv-Gu-9xr" detailTextLabel="R9n-vv-Ghp" imageView="LS2-BR-Uy8" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="L7b-gO-kD1">
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L7b-gO-kD1" id="E29-mZ-Hb7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bkv-Gu-9xr">
@@ -1102,6 +1102,10 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmD-mK-Tbe">
                                 <rect key="frame" x="26" y="264" width="322" height="139"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pzw-Yp-PVA" id="Ows-PX-KY1"/>
+                                    <outlet property="delegate" destination="Pzw-Yp-PVA" id="5t5-uz-3RX"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgd-6R-7XK">
                                 <rect key="frame" x="16" y="478" width="343" height="30"/>
@@ -1164,6 +1168,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gG6-TC-VaZ"/>
                     </view>
+                    <connections>
+                        <outlet property="colleges" destination="AmD-mK-Tbe" id="Csa-DL-Y25"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocV-gG-GIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1183,7 +1190,7 @@
         <segue reference="Kxy-zQ-8xm"/>
         <segue reference="9tV-Xw-9Va"/>
         <segue reference="iPR-Hp-Isj"/>
-        <segue reference="qXF-EC-Hwm"/>
+        <segue reference="Q5y-x6-zZy"/>
         <segue reference="NkX-ID-aqL"/>
         <segue reference="eOj-eI-tPj"/>
     </inferredMetricsTieBreakers>
