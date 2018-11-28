@@ -73,6 +73,7 @@
                                     <color key="titleColor" red="0.01176470588" green="0.098039215690000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Jm-VN-M6l"/>
                                     <segue destination="r3L-5J-6eT" kind="show" id="998-4w-klv"/>
                                 </connections>
                             </button>
@@ -156,7 +157,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email Address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-aD-feX">
+                            <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-aD-feX">
                                 <rect key="frame" x="16" y="162" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.58720651219999997" green="0.58288326779999999" blue="0.57674961899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -248,7 +249,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IcO-KA-lJh">
+                            <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IcO-KA-lJh">
                                 <rect key="frame" x="16" y="161" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.58720651219999997" green="0.58288326779999999" blue="0.57674961899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -452,21 +453,6 @@
                 <exit id="Tba-6i-xky" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1925.5999999999999" y="921.58920539730138"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Ejl-jy-WPe">
-            <objects>
-                <viewController id="MVK-3h-AjH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FzE-GU-MU9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.45144462549999997" green="0.63506055110000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="GaN-5l-TTS"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5N0-vs-NAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2944" y="906"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9pz-vW-UIv">
@@ -791,7 +777,7 @@
                                 <color key="textColor" red="1" green="0.45396765016955754" blue="0.38829500039974529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name of Event" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gD-Gv-ywN">
+                            <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Event" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gD-Gv-ywN">
                                 <rect key="frame" x="18" y="88.5" width="341" height="30"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -813,7 +799,7 @@
                                 <color key="textColor" red="1" green="0.45396765020000002" blue="0.38829500039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Location" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TS1-yI-80l">
+                            <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TS1-yI-80l">
                                 <rect key="frame" x="16" y="249.5" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -1140,7 +1126,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90492621531111128" green="0.92084769452500004" blue="0.8996984144750001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.91021188775544681" green="0.92084769452500004" blue="0.8899697010962202" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="5JF-So-dVD" firstAttribute="leading" secondItem="KyL-Z5-Fjl" secondAttribute="trailing" constant="32" id="1Wr-vz-DLh"/>
                             <constraint firstItem="AmD-mK-Tbe" firstAttribute="leading" secondItem="gG6-TC-VaZ" secondAttribute="leading" constant="26" id="2XW-UT-0i7"/>
@@ -1193,12 +1179,13 @@
         <image name="social" width="128" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="998-4w-klv"/>
+        <segue reference="HKO-Iq-2MN"/>
+        <segue reference="Kxy-zQ-8xm"/>
         <segue reference="9tV-Xw-9Va"/>
         <segue reference="iPR-Hp-Isj"/>
         <segue reference="qXF-EC-Hwm"/>
         <segue reference="NkX-ID-aqL"/>
-        <segue reference="JDG-8A-DkQ"/>
+        <segue reference="eOj-eI-tPj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.45396765020000002" blue="0.38829500039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
