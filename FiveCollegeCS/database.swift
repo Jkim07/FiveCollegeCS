@@ -26,3 +26,40 @@ func openDatabase() -> OpaquePointer? {
     return db
 }
 let db = openDatabase()
+
+let insertStatementString = "INSERT INTO users (id, username, password) VALUES (?, ?, ?);"
+
+func insert() {
+    var insertStatement: OpaquePointer? = nil
+    
+    // 1
+    if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
+        let Id: Int32 = 3
+        let user: NSString = "Julie"
+        let pass: NSString = "Kim"
+        
+        // 2
+        sqlite3_bind_int(insertStatement, 1, Id)
+        // 3
+        sqlite3_bind_text(insertStatement, 2, user.utf8String, -1, nil)
+        // 4
+        sqlite3_bind_text(insertStatement, 3, pass.utf8String, -1, nil)
+        
+        // 5
+        if sqlite3_step(insertStatement) == SQLITE_DONE {
+            print("Successfully inserted row.")
+        } else {
+            print("Could not insert row.")
+            print(sqlite3_step(insertStatement))
+        }
+    } else {
+        print("INSERT statement could not be prepared.")
+    }
+    // 5
+    sqlite3_finalize(insertStatement)
+}
+//insert()
+
+
+
+

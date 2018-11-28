@@ -13,63 +13,53 @@ class LoginViewController: UIViewController {
    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var password: UITextField!
-  
     
-    var path = "/Users/Perla/Desktop/Github/FiveCollegeCS/FiveCollegeCS/myData.db"
+    @IBOutlet weak var loginButton0: UIButton!
     
+    @IBAction func loginButton(_ sender: UIButton) {
+        //grab user email input
+        let inputEmail=email.text
+        let inputPassword=password.text
+        
+        let queryStatementString = "SELECT * FROM users WHERE username = '" + inputEmail! + "' AND password = '" + inputPassword! + "'"
+        
+        
+        func query() {
+            var queryStatement: OpaquePointer? = nil
+            // 1
+            if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+                // 2
+                if sqlite3_step(queryStatement) == SQLITE_ROW {
+                    loginButton0.isEnabled = true
+                    // 3
+                    let id = sqlite3_column_int(queryStatement, 0)
+                    
+                    // 4
+                    let queryResultCol1 = sqlite3_column_text(queryStatement, 1)
+                    let username = String(cString: queryResultCol1!)
+                    
+                    // 5
+                    print("Query Result:")
+                    print("Person Exists: id =\(id) | email=\(username)")
+                    
+                } else {
+                    print("Query returned no results")
+                    //loginButton0.isEnabled = false
+                }
+            } else {
+                print("SELECT statement could not be prepared")
+            }
+            
+            // 6
+            sqlite3_finalize(queryStatement)
+        }
+        query()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        func openDatabase() -> OpaquePointer? {
-            var db: OpaquePointer? = nil
-            
-            if sqlite3_open(path, &db) == SQLITE_OK {
-                print("Successfully opened connection to database at \(path)")
-                return db
-            } else {
-                print("Unable to open database. Verify that you created the directory described " +
-                    "in the Getting Started section.")
-                
-                //        PlaygroundPage.current.finishExecution()
-            }
-            return db
-        }
-        let db = openDatabase()
         
-        let insertStatementString = "INSERT INTO users (id, username, password) VALUES (?, ?, ?);"
-        
-        func insert() {
-            var insertStatement: OpaquePointer? = nil
-            
-            // 1
-            if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
-                let Id: Int32 = 1
-                let user: NSString = "Perla"
-                let pass: NSString = "Garcia"
-                
-                // 2
-                sqlite3_bind_int(insertStatement, 1, Id)
-                // 3
-                sqlite3_bind_text(insertStatement, 2, user.utf8String, -1, nil)
-                // 4
-                sqlite3_bind_text(insertStatement, 3, pass.utf8String, -1, nil)
-                
-                // 5
-                if sqlite3_step(insertStatement) == SQLITE_DONE {
-                    print("Successfully inserted row.")
-                } else {
-                    print("Could not insert row.")
-                    print(sqlite3_step(insertStatement))
-                }
-            } else {
-                print("INSERT statement could not be prepared.")
-            }
-            // 5
-            sqlite3_finalize(insertStatement)
-        }
-        insert()
     }
 
     override func didReceiveMemoryWarning() {

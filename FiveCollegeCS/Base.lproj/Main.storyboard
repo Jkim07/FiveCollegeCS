@@ -133,7 +133,7 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="kyn-SQ-09p" id="GyP-Au-4c8"/>
-                        <outlet property="loginButton" destination="21L-5X-soa" id="qPt-dJ-WRF"/>
+                        <outlet property="loginButton0" destination="21L-5X-soa" id="kf3-TB-1fn"/>
                         <outlet property="password" destination="4oR-Is-Fhh" id="6is-n4-ygD"/>
                         <outlet property="signUpButton" destination="k0g-2Y-bHj" id="DPj-in-qRx"/>
                     </connections>
