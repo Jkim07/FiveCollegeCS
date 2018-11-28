@@ -958,6 +958,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1mb-Fh-4k1" kind="show" id="24q-Hg-zuK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -983,6 +986,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2Q-i5-4gm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2845.5999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bhY-Sp-VDG">
+            <objects>
+                <viewController id="1mb-Fh-4k1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JTC-pp-Vii">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coding Challenge Groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34s-7u-ihl">
+                                <rect key="frame" x="36" y="98" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlQ-vI-5eT">
+                                <rect key="frame" x="18" y="204" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jtp-8s-BPu">
+                                <rect key="frame" x="26" y="236" width="323" height="122"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Come join us for a coding session where we will go over technical interviews, Hackerrank challenges, White boarding interviews, and phone interviews. Come prepared with some questions. Dominoes will be served. Bring a friend and I hope to see you all there!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/28/18   5:00pm-6:00pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhS-Q8-RXH">
+                                <rect key="frame" x="36" y="127" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smith College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMz-GS-zSS">
+                                <rect key="frame" x="36" y="156" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ford Hall 140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikA-Yk-DBk">
+                                <rect key="frame" x="36" y="185" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-NK-ZbC">
+                                <rect key="frame" x="26" y="39" width="34" height="30"/>
+                                <color key="tintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="r3L-5J-6eT" kind="show" id="v9h-9T-gTc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jtp-8s-BPu" firstAttribute="leading" secondItem="V0P-UP-NZn" secondAttribute="leading" constant="26" id="E0W-JO-QEf"/>
+                            <constraint firstItem="ikA-Yk-DBk" firstAttribute="top" secondItem="JMz-GS-zSS" secondAttribute="bottom" constant="8" symbolic="YES" id="GOZ-kG-onO"/>
+                            <constraint firstItem="V0P-UP-NZn" firstAttribute="bottom" secondItem="jtp-8s-BPu" secondAttribute="bottom" constant="309" id="Go1-RL-REm"/>
+                            <constraint firstItem="DhS-Q8-RXH" firstAttribute="top" secondItem="34s-7u-ihl" secondAttribute="bottom" constant="8" symbolic="YES" id="IUS-x4-g0v"/>
+                            <constraint firstItem="34s-7u-ihl" firstAttribute="leading" secondItem="DhS-Q8-RXH" secondAttribute="leading" id="QDK-P4-5E6"/>
+                            <constraint firstItem="aRS-NK-ZbC" firstAttribute="top" secondItem="V0P-UP-NZn" secondAttribute="top" constant="19" id="Ykb-qM-YL4"/>
+                            <constraint firstItem="DhS-Q8-RXH" firstAttribute="leading" secondItem="JMz-GS-zSS" secondAttribute="leading" id="chb-c3-4Lf"/>
+                            <constraint firstItem="JMz-GS-zSS" firstAttribute="leading" secondItem="ikA-Yk-DBk" secondAttribute="leading" id="dRG-5r-bLO"/>
+                            <constraint firstItem="jtp-8s-BPu" firstAttribute="top" secondItem="ikA-Yk-DBk" secondAttribute="bottom" constant="30" id="gHo-X2-ife"/>
+                            <constraint firstItem="34s-7u-ihl" firstAttribute="leading" secondItem="V0P-UP-NZn" secondAttribute="leading" constant="36" id="iYi-wh-EpJ"/>
+                            <constraint firstItem="JMz-GS-zSS" firstAttribute="top" secondItem="DhS-Q8-RXH" secondAttribute="bottom" constant="8" symbolic="YES" id="nad-pF-Y7i"/>
+                            <constraint firstItem="aRS-NK-ZbC" firstAttribute="leading" secondItem="jtp-8s-BPu" secondAttribute="leading" id="s0P-Hp-Zgv"/>
+                            <constraint firstItem="34s-7u-ihl" firstAttribute="top" secondItem="V0P-UP-NZn" secondAttribute="top" constant="78" id="xX0-zM-a1i"/>
+                            <constraint firstItem="jtp-8s-BPu" firstAttribute="centerX" secondItem="JTC-pp-Vii" secondAttribute="centerX" id="zhQ-oU-SqY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V0P-UP-NZn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Afh-3N-bnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2845.5999999999999" y="884.70764617691157"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="Wnk-t6-imv">
