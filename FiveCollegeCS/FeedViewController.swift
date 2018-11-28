@@ -10,7 +10,7 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let myimages: [UIImage] = [#imageLiteral(resourceName: "career"), #imageLiteral(resourceName: "academics"), #imageLiteral(resourceName: "social"), #imageLiteral(resourceName: "org"),#imageLiteral(resourceName: "org"), #imageLiteral(resourceName: "career"), #imageLiteral(resourceName: "academics"), #imageLiteral(resourceName: "social"), #imageLiteral(resourceName: "career")]
+    let myimages: [UIImage] = [#imageLiteral(resourceName: "careers"), #imageLiteral(resourceName: "academics"), #imageLiteral(resourceName: "social"), #imageLiteral(resourceName: "org"),#imageLiteral(resourceName: "org"), #imageLiteral(resourceName: "careers"), #imageLiteral(resourceName: "academics"), #imageLiteral(resourceName: "social"), #imageLiteral(resourceName: "careers")]
     
     let data = ["Coding Challenges", "Harambe Speaks","Robotics Club","Grace Hopper", "Women in Gaming","Amazon","UMass Hackathon", "Google Session","Video Game Team"]
 
