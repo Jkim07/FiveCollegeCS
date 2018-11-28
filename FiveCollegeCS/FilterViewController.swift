@@ -15,7 +15,7 @@ class FilterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     private let schoolComponent = 0
     
     private let schoolTypes = [
-        "UMass Amherst", "Amherst College", "Smith College", "Mt. Holyoke College",
+        "All","UMass Amherst", "Amherst College", "Smith College", "Mt. Holyoke College",
         "Hampshire College"]
  
     // MARK:-
