@@ -1194,12 +1194,13 @@
         <image name="social" width="128" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="998-4w-klv"/>
+        <segue reference="HKO-Iq-2MN"/>
+        <segue reference="x4t-my-hgL"/>
         <segue reference="9tV-Xw-9Va"/>
         <segue reference="iPR-Hp-Isj"/>
-        <segue reference="qXF-EC-Hwm"/>
+        <segue reference="Q5y-x6-zZy"/>
         <segue reference="NkX-ID-aqL"/>
-        <segue reference="JDG-8A-DkQ"/>
+        <segue reference="Lqw-mo-2Jr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.45396765020000002" blue="0.38829500039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
