@@ -42,9 +42,6 @@
                                 <color key="textColor" red="0.58720651223574793" green="0.58288326783294997" blue="0.57674961897655519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
-                                <connections>
-                                    <action selector="addUser" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Z4d-R8-0SA"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4oR-Is-Fhh">
                                 <rect key="frame" x="16" y="300" width="343" height="30"/>
@@ -76,7 +73,6 @@
                                     <color key="titleColor" red="0.01176470588" green="0.098039215690000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PzA-ig-zV0"/>
                                     <segue destination="r3L-5J-6eT" kind="show" id="998-4w-klv"/>
                                 </connections>
                             </button>
