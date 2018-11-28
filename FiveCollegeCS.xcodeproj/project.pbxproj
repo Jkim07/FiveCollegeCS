@@ -10,6 +10,7 @@
 		4E61388B21A8995A00ED1F82 /* myData.db in Resources */ = {isa = PBXBuildFile; fileRef = 4E61388A21A8995A00ED1F82 /* myData.db */; };
 		4E61388D21A899EA00ED1F82 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E61388C21A899EA00ED1F82 /* libsqlite3.0.tbd */; };
 		4E61389521ACC8FD00ED1F82 /* database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61389421ACC8FC00ED1F82 /* database.swift */; };
+		4E61389721AE504E00ED1F82 /* event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61389621AE504E00ED1F82 /* event.swift */; };
 		EF31CD6421868DE600D72E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31CD6321868DE600D72E36 /* AppDelegate.swift */; };
 		EF31CD6621868DE600D72E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31CD6521868DE600D72E36 /* ViewController.swift */; };
 		EF31CD6921868DE600D72E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31CD6721868DE600D72E36 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		4E61388C21A899EA00ED1F82 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4E61389021A8C84B00ED1F82 /* FiveCollegeCS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FiveCollegeCS-Bridging-Header.h"; sourceTree = "<group>"; };
 		4E61389421ACC8FC00ED1F82 /* database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = database.swift; sourceTree = "<group>"; };
+		4E61389621AE504E00ED1F82 /* event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event.swift; sourceTree = "<group>"; };
 		EF31CD6021868DE600D72E36 /* FiveCollegeCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiveCollegeCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF31CD6321868DE600D72E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF31CD6521868DE600D72E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4E61389421ACC8FC00ED1F82 /* database.swift */,
+				4E61389621AE504E00ED1F82 /* event.swift */,
 				4E61388A21A8995A00ED1F82 /* myData.db */,
 				EF31CD6321868DE600D72E36 /* AppDelegate.swift */,
 				EFF0F07621869C280061E2A4 /* LoginViewController.swift */,
@@ -184,6 +187,7 @@
 				EF31CD6621868DE600D72E36 /* ViewController.swift in Sources */,
 				EFF0F07921869C880061E2A4 /* SignUpViewController.swift in Sources */,
 				EF31CD6421868DE600D72E36 /* AppDelegate.swift in Sources */,
+				4E61389721AE504E00ED1F82 /* event.swift in Sources */,
 				EFF0F07D2186AC9A0061E2A4 /* FeedViewController.swift in Sources */,
 				EFF0F0822186B7260061E2A4 /* ProfileViewController.swift in Sources */,
 				4E61389521ACC8FD00ED1F82 /* database.swift in Sources */,

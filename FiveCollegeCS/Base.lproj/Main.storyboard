@@ -920,6 +920,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Y3t-5h-zSV" kind="show" id="QQa-zk-3tI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1014,7 +1017,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmD-mK-Tbe">
-                                <rect key="frame" x="26" y="264" width="322" height="139"/>
+                                <rect key="frame" x="26" y="243" width="322" height="160"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Pzw-Yp-PVA" id="Ows-PX-KY1"/>
                                     <outlet property="delegate" destination="Pzw-Yp-PVA" id="5t5-uz-3RX"/>
@@ -1054,7 +1057,7 @@
                             <constraint firstItem="KyL-Z5-Fjl" firstAttribute="top" secondItem="r5q-KM-0FB" secondAttribute="bottom" constant="6" id="ESF-fr-msX"/>
                             <constraint firstItem="KyL-Z5-Fjl" firstAttribute="leading" secondItem="gG6-TC-VaZ" secondAttribute="leading" constant="35" id="F7o-Cp-s2I"/>
                             <constraint firstItem="KyL-Z5-Fjl" firstAttribute="firstBaseline" secondItem="5JF-So-dVD" secondAttribute="firstBaseline" id="Ga5-TE-4B2"/>
-                            <constraint firstItem="AmD-mK-Tbe" firstAttribute="top" secondItem="KyL-Z5-Fjl" secondAttribute="bottom" constant="51" id="Jbb-g9-YdI"/>
+                            <constraint firstItem="AmD-mK-Tbe" firstAttribute="top" secondItem="KyL-Z5-Fjl" secondAttribute="bottom" constant="30" id="Jbb-g9-YdI"/>
                             <constraint firstItem="MzN-DS-7yy" firstAttribute="top" secondItem="V6N-Wa-syK" secondAttribute="bottom" constant="11" id="Kpz-U2-QfX"/>
                             <constraint firstItem="gG6-TC-VaZ" firstAttribute="bottom" secondItem="wgd-6R-7XK" secondAttribute="bottom" constant="159" id="L5s-67-GXv"/>
                             <constraint firstItem="r5q-KM-0FB" firstAttribute="top" secondItem="gG6-TC-VaZ" secondAttribute="top" constant="128" id="NUP-le-YQN"/>
