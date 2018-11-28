@@ -901,21 +901,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bkv-Gu-9xr">
-                                                    <rect key="frame" x="85" y="10" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="75" y="10" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R9n-vv-Ghp">
-                                                    <rect key="frame" x="85" y="30.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="75" y="30.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="career" id="LS2-BR-Uy8">
-                                                    <rect key="frame" x="15" y="0.0" width="55" height="54.5"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="careers" id="LS2-BR-Uy8">
+                                                    <rect key="frame" x="15" y="0.0" width="45" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -964,7 +964,7 @@
                                     <constraint firstAttribute="width" constant="44" id="x70-MV-ujH"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="career" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-FP-kXI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="careers" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-FP-kXI">
                                 <rect key="frame" x="121" y="147" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="NeB-8c-KEF"/>
@@ -1094,12 +1094,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="academics" width="128" height="128"/>
-        <image name="career" width="128" height="127"/>
+        <image name="academics" width="200" height="240"/>
+        <image name="careers" width="200" height="240"/>
         <image name="clear-robot" width="128" height="128"/>
-        <image name="org" width="128" height="92"/>
+        <image name="org" width="200" height="240"/>
         <image name="robot" width="120" height="120"/>
-        <image name="social" width="128" height="75"/>
+        <image name="social" width="200" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="998-4w-klv"/>
