@@ -10,10 +10,16 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var nextButton: UIButton!
+    var email:String = ""
+    @IBOutlet weak var emailInput: UITextField!
+    @IBAction func emailButton(_ sender: Any) {
+       //email = emailInput.text!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        emailInput?.text = email
+        
         // Do any additional setup after loading the view.
         //self.nextButton.layer.cornerRadius = 5
     }

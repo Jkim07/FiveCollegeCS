@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var roundedButton: UIButton!
+    //    @IBOutlet weak var roundedButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.roundedButton.layer.cornerRadius = 5
-    }
+        
+}
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
