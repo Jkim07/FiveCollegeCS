@@ -559,6 +559,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="My Profile" id="2b9-4n-mlv">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="jGe-sV-Hfi">
+                                            <connections>
+                                                <segue destination="r3L-5J-6eT" kind="show" id="Lt0-xg-bog"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="NAc-oh-LBL">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OJR-M0-OSI">
                                                 <rect key="frame" x="329" y="7" width="30" height="30"/>
@@ -1312,7 +1317,7 @@
         <image name="social" width="200" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UOi-1R-TDf"/>
+        <segue reference="Lt0-xg-bog"/>
         <segue reference="tlZ-Iz-dGi"/>
         <segue reference="iPR-Hp-Isj"/>
         <segue reference="Xac-Fd-YBZ"/>
