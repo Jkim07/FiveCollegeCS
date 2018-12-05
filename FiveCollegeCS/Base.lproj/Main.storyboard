@@ -17,6 +17,8 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="EEE-9D-2Cu" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FiveCollegeCS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -140,8 +142,6 @@
                         <outlet property="signUpButton" destination="k0g-2Y-bHj" id="DPj-in-qRx"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="EEE-9D-2Cu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
@@ -1217,6 +1217,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="onButtonPressed:" destination="Pzw-Yp-PVA" eventType="touchUpInside" id="MhU-rZ-Jbd"/>
                                     <segue destination="r3L-5J-6eT" kind="show" id="DKC-HV-brk"/>
                                 </connections>
                             </button>
@@ -1291,7 +1292,9 @@
                         <viewLayoutGuide key="safeArea" id="gG6-TC-VaZ"/>
                     </view>
                     <connections>
-                        <outlet property="colleges" destination="AmD-mK-Tbe" id="Csa-DL-Y25"/>
+                        <outlet property="collegePicker" destination="AmD-mK-Tbe" id="Oap-jv-w5b"/>
+                        <outlet property="filterButton" destination="wgd-6R-7XK" id="jHc-8K-7x2"/>
+                        <outlet property="selectedCollegeLabel" destination="kXa-6V-BOn" id="74w-eM-1pV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocV-gG-GIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1309,9 +1312,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DKC-HV-brk"/>
-        <segue reference="9tV-Xw-9Va"/>
+        <segue reference="tlZ-Iz-dGi"/>
         <segue reference="iPR-Hp-Isj"/>
-        <segue reference="Lqw-mo-2Jr"/>
+        <segue reference="Xac-Fd-YBZ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.45396765020000002" blue="0.38829500039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

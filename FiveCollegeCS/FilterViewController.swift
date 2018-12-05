@@ -10,8 +10,10 @@ import UIKit
 
 class FilterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource  {
 
-    @IBOutlet weak var colleges: UIPickerView!
+    @IBOutlet weak var collegePicker: UIPickerView!
+    @IBOutlet weak var selectedCollegeLabel: UILabel!
     
+    @IBOutlet weak var filterButton: UIButton!
     private let schoolComponent = 0
     
     private let schoolTypes = [
@@ -33,6 +35,14 @@ class FilterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         Int) -> String? {
             return schoolTypes[row]
     }
+    
+    @IBAction func onButtonPressed(_ sender: UIButton) {
+        let row = collegePicker.selectedRow(inComponent: 0)
+        let college = schoolTypes[row]
+        let text = "Selected College: \(college)"
+        selectedCollegeLabel.text = text
+    }
+    
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //
