@@ -15,10 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var password: UITextField!
     
-    @IBOutlet weak var loginButton0: UIButton!
-    
     @IBAction func loginButton(_ sender: UIButton) {
-        //grab user email input
         let inputEmail=email.text
         let inputPassword=password.text
         
@@ -28,10 +25,11 @@ class LoginViewController: UIViewController {
         func query() {
             var queryStatement: OpaquePointer? = nil
             // 1
+            print("In query statement")
             if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
                 // 2
                 if sqlite3_step(queryStatement) == SQLITE_ROW {
-                    loginButton0.isEnabled = true
+//                    loginButton0.isEnabled = true
                     // 3
                     let id = sqlite3_column_int(queryStatement, 0)
                     

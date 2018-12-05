@@ -8,8 +8,30 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    private let schoolComponent = 0
+    
+    private let schoolNames = ["All","UMass Amherst", "Amherst College", "Smith College", "Mt. Holyoke College", "Hampshire College"]
+    
+    @IBOutlet weak var CollegePicker: UIPickerView!
+    
+    @IBOutlet weak var addEventButton: UIButton!
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return schoolNames.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component:Int) -> String? {
+        return schoolNames[row]
+    }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -9,7 +9,6 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
     var email:String = ""
     @IBOutlet weak var emailInput: UITextField!
     @IBAction func emailButton(_ sender: Any) {

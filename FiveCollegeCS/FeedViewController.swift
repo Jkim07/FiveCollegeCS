@@ -14,8 +14,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let data = ["Coding Challenges", "Harambe Speaks","Robotics Club","Grace Hopper", "Women in Gaming","Amazon","UMass Hackathon", "Google Session","Video Game Team"]
     
-    let subtitles = ["04/21 4:20pm", "04/20 6:00pm", "11/20 7:00pm", "12/09 8:00pm",
-    "05/09 7:10pm", "08/14 4:00pm","3/21 6:07pm","07/22 12:00pm","11/20 7:00pm"]
+    let subtitles = ["04/21 4:20pm\nUMass Auditorium", "04/20 6:00pm\nSmith College CC Room 102", "11/20 7:00pm\nSmith College Lazarus Center", "12/09 8:00pm\nHampshire College",
+    "05/09 7:10pm\nMount Holyhoke", "08/14 4:00pm\nMount Holyhoke Library Discussion Room","3/21 6:07pm\nAmherst College Main Dining Hall","07/22 12:00pm\nAmherst College","11/20 7:00pm\nSmith College Ford Hall Room 320"]
 
     @IBOutlet weak var table: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
