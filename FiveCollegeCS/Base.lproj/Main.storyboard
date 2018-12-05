@@ -135,7 +135,6 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="kyn-SQ-09p" id="GyP-Au-4c8"/>
-                        <outlet property="loginButton0" destination="21L-5X-soa" id="kf3-TB-1fn"/>
                         <outlet property="password" destination="4oR-Is-Fhh" id="6is-n4-ygD"/>
                         <outlet property="signUpButton" destination="k0g-2Y-bHj" id="DPj-in-qRx"/>
                     </connections>
@@ -1308,7 +1307,7 @@
         <image name="social" width="200" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DKC-HV-brk"/>
+        <segue reference="998-4w-klv"/>
         <segue reference="9tV-Xw-9Va"/>
         <segue reference="iPR-Hp-Isj"/>
         <segue reference="Lqw-mo-2Jr"/>
