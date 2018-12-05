@@ -15,12 +15,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var password: UITextField!
     
-    @IBAction func loginButton(_ sender: UIButton) {
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
         let inputEmail=email.text
         let inputPassword=password.text
         
         let queryStatementString = "SELECT * FROM users WHERE username = '" + inputEmail! + "' AND password = '" + inputPassword! + "'"
-        
         
         func query() {
             var queryStatement: OpaquePointer? = nil
@@ -40,10 +39,11 @@ class LoginViewController: UIViewController {
                     // 5
                     print("Query Result:")
                     print("Person Exists: id =\(id) | email=\(username)")
-                    
+                    performSegue(withIdentifier: "login", sender: self)
                 } else {
                     print("Query returned no results")
                     //loginButton0.isEnabled = false
+    
                 }
             } else {
                 print("SELECT statement could not be prepared")
@@ -54,6 +54,7 @@ class LoginViewController: UIViewController {
         }
         query()
     }
+
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //

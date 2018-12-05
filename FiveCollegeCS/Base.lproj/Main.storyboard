@@ -17,8 +17,6 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="EEE-9D-2Cu" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FiveCollegeCS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -76,8 +74,7 @@
                                     <color key="titleColor" red="0.01176470588" green="0.098039215690000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Jm-VN-M6l"/>
-                                    <segue destination="r3L-5J-6eT" kind="show" id="998-4w-klv"/>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KxB-po-1xf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBW-gP-W0u">
@@ -139,8 +136,11 @@
                         <outlet property="email" destination="kyn-SQ-09p" id="GyP-Au-4c8"/>
                         <outlet property="password" destination="4oR-Is-Fhh" id="6is-n4-ygD"/>
                         <outlet property="signUpButton" destination="k0g-2Y-bHj" id="DPj-in-qRx"/>
+                        <segue destination="r3L-5J-6eT" kind="show" identifier="login" id="UOi-1R-TDf"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="EEE-9D-2Cu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
@@ -1310,10 +1310,10 @@
         <image name="social" width="200" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DKC-HV-brk"/>
+        <segue reference="UOi-1R-TDf"/>
         <segue reference="tlZ-Iz-dGi"/>
         <segue reference="iPR-Hp-Isj"/>
-        <segue reference="Xac-Fd-YBZ"/>
+        <segue reference="dZf-fA-dej"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.45396765020000002" blue="0.38829500039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
