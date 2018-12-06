@@ -41,21 +41,6 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
     
-    
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return schoolNames.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component:Int) -> String? {
-        return schoolNames[row]
-    }
-
-    
     @IBAction func addEventButton(_ sender: Any) {
         let type2 = type
         let event=eventName.text
@@ -74,7 +59,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             print("Here")
             print("Here")
             let dateformatter = DateFormatter()
-            dateformatter.dateStyle = DateFormatter.Style.short
+            dateformatter.dateStyle = DateFormatter.Style.long
             let now = dateformatter.string(from: date)
             // 1
             if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
@@ -96,12 +81,12 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                 // 4
                 if sqlite3_step(insertStatement) == SQLITE_DONE {
                     print("Successfully inserted row.")
-                    print(kind)
-                    print(school)
-                    print(name)
-                    print(loc)
-                    print(date_time)
-                    print(descriptions)
+//                    print(kind)
+//                    print(school)
+//                    print(name)
+//                    print(loc)
+//                    print(date_time)
+//                    print(descriptions)
                 } else {
                     print("Could not insert row.")
                 }
@@ -114,6 +99,19 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         insert()
         
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return schoolNames.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component:Int) -> String? {
+        return schoolNames[row]
+    }
+
         
     }
     
