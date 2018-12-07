@@ -48,18 +48,15 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         let location=eventLocation.text
         let date = dateAndTime.date
         let description = descriptionField.text
-        
+
+
         let insertStatementString = "INSERT INTO all_data (type, school, event_name, location, date_and_time, description) VALUES (?, ?, ?, ?, ?, ?);"
         
         func insert() {
             var insertStatement: OpaquePointer? = nil
-            print("Here")
-            print("Here")
-            print("Here")
-            print("Here")
-            print("Here")
             let dateformatter = DateFormatter()
             dateformatter.dateStyle = DateFormatter.Style.long
+              dateformatter.timeStyle = DateFormatter.Style.short
             let now = dateformatter.string(from: date)
             // 1
             if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
@@ -69,7 +66,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                 let loc: NSString? = location as! NSString
                 let date_time: NSString? = now as NSString
                 let descriptions: NSString? = description as! NSString
-                
+
                 // 3
                 sqlite3_bind_text(insertStatement, 1, kind?.utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement, 2, school?.utf8String, -1, nil)
@@ -77,7 +74,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                 sqlite3_bind_text(insertStatement, 4, loc?.utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement, 5, date_time?.utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement, 6, descriptions?.utf8String, -1, nil)
-                
+
                 // 4
                 if sqlite3_step(insertStatement) == SQLITE_DONE {
                     print("Successfully inserted row.")
@@ -97,7 +94,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             sqlite3_finalize(insertStatement)
         }
         insert()
-        
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
