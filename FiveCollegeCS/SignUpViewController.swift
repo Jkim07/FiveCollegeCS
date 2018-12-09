@@ -44,6 +44,10 @@ class SignUpViewController: UIViewController {
                 // 4
                 if sqlite3_step(insertStatement) == SQLITE_DONE {
                     print("Successfully inserted row.")
+//                    print(user)
+//                    print(pass)
+//                    print(first)
+//                    print(last)
                 } else {
                     print("Could not insert row.")
                 }

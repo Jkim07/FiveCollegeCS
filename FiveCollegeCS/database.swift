@@ -11,7 +11,16 @@ import SQLite3
 
 var path = "/Users/Perla/Desktop/Github/FiveCollegeCS/FiveCollegeCS/myData.db"
 
+//let fileManager = FileManager.default
+//let path = Bundle.main.resourcePath! + "/myData.db"
+// Get current directory path
+//let path = fileManager.currentDirectoryPath
+
+//let path = NSURL(fileURLWithPath: path_to_file).lastPathComponent!
+
 func openDatabase() -> OpaquePointer? {
+//    print("this is the path = ", path)
+//    print(" ")
     var db: OpaquePointer? = nil
     
     if sqlite3_open(path, &db) == SQLITE_OK {
