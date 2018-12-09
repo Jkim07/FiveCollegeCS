@@ -10,9 +10,10 @@ import Foundation
 import SQLite3
 
 //var path = "/Users/Perla/Desktop/Github/FiveCollegeCS/FiveCollegeCS/myData.db"
+var path = "/Users/juyoungkim/Documents/Beta    App/FiveCollegeCS/FiveCollegeCS/myData.db"
+//let fileManager = FileManager.default
+//let path = Bundle.main.resourcePath! + "/myData.db"
 
-let fileManager = FileManager.default
-let path = Bundle.main.resourcePath! + "/myData.db"
 // Get current directory path
 //let path = fileManager.currentDirectoryPath
 
