@@ -11,11 +11,14 @@ import UIKit
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //var myIndex = 0
     var data = [String]()
-    //let myimages: [UIImage] = [#imageLiteral(resourceName: "careers"),#imageLiteral(resourceName: "social"), #imageLiteral(resourceName: "org"), #imageLiteral(resourceName: "academics")]
-    
+    var subtitles = [String]()
+//    let myimages: [UIImage] = [#imageLiteral(resourceName: "careers"),#imageLiteral(resourceName: "social"), #imageLiteral(resourceName: "org"), #imageLiteral(resourceName: "academics")]
+//    let myimages = ["careers":#imageLiteral(resourceName: "careers"),"social":#imageLiteral(resourceName: "social"), "org":#imageLiteral(resourceName: "org"),"academics": #imageLiteral(resourceName: "academics")]
+    let myimages = ["careers":#imageLiteral(resourceName: "careers"),"social":#imageLiteral(resourceName: "social"), "org":#imageLiteral(resourceName: "org"),"academics": #imageLiteral(resourceName: "academics")]
+    var types = [UIImage]()
     
 //    let subtitles = ["04/21 4:20pm\nUMass Auditorium", "04/20 6:00pm\nSmith College CC Room 102", "11/20 7:00pm\nSmith College Lazarus Center", "12/09 8:00pm\nHampshire College",//    "05/09 7:10pm\nMount Holyhoke", "08/14 4:00pm\nMount Holyhoke Library Discussion Room","3/21 6:07pm\nAmherst College Main Dining Hall","07/22 12:00pm\nAmherst College","11/20 7:00pm\nSmith College Ford Hall Room 320"]
-    let queryStatementString = "SELECT event_name FROM all_data"
+    let queryStatementString = "SELECT * FROM all_data"
     
     func query() {
         var queryStatement: OpaquePointer? = nil
@@ -28,14 +31,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 // 3
                 let id = sqlite3_column_int(queryStatement, 0)
+                let type = sqlite3_column_text(queryStatement, 1)
+                let school = sqlite3_column_text(queryStatement, 2)
                 // 4
-                let queryResultCol1 = sqlite3_column_text(queryStatement, 0)
+                let eventname = sqlite3_column_text(queryStatement, 3)
+                let location = sqlite3_column_text(queryStatement, 4)
+                let date_and_time = sqlite3_column_text(queryStatement, 5)
+                let description = sqlite3_column_text(queryStatement, 6)
                 
-                if queryResultCol1==nil {
+                if eventname==nil {
                     print("could not find title")
                 }else{
                     
-                    let eventTitle = String(cString: queryResultCol1!)
+                    let eventTitle = String(cString: eventname!)
+                    let subtitle = String(cString: date_and_time!)
+                    let picture = String(cString: type!)
                     
                     // 5
                     print("Query Result:")
@@ -43,7 +53,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     //performSegue(withIdentifier: "login", sender: self)
                     
                     data.append(eventTitle)
+                    subtitles.append(subtitle)
+                   // types.append(myimages[picture]!)
                     print("Event Title is", eventTitle)
+                    print("Subtitle is", subtitle)
+//                    print("Picture Type", )
+                    print("types list printed= ",types)
                     print("printing data array here", data)
                 }
                 
@@ -75,8 +90,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         //let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = data[indexPath.row]
-        //cell.detailTextLabel?.text = subtitles[indexPath.row]
-        //cell.imageView?.image = myimages[indexPath.row]
+        cell.detailTextLabel?.text = subtitles[indexPath.row]
+        cell.imageView?.image = types[indexPath.row]
+//        cell.imageView?.image = myimages[indexPath.row]
         
         return(cell)
     }
