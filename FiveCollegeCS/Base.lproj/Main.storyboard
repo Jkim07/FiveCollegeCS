@@ -1309,7 +1309,6 @@
         <image name="social" width="200" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HKO-Iq-2MN"/>
         <segue reference="Kxy-zQ-8xm"/>
         <segue reference="9tV-Xw-9Va"/>
         <segue reference="iPR-Hp-Isj"/>
