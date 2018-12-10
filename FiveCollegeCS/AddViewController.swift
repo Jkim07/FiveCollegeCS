@@ -13,7 +13,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     private let schoolComponent = 0
     
     private let schoolNames = ["All","UMass Amherst", "Amherst College", "Smith College", "Mt. Holyoke College", "Hampshire College"]
-    var type = "";
+    var type = ""
     
     @IBOutlet weak var eventName: UITextField!
     @IBOutlet weak var CollegePicker: UIPickerView!
@@ -22,27 +22,184 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var descriptionField: UITextView!
         
     @IBOutlet weak var academics_img: UIImageView!
-    
+    @IBOutlet weak var career_img: UIImageView!
+    @IBOutlet weak var org_img: UIImageView!
+    @IBOutlet weak var social_img: UIImageView!
+    @IBOutlet weak var academic_label: UILabel!
+    @IBOutlet weak var social_label: UILabel!
+
+    @IBOutlet weak var career_label: UILabel!
+    @IBOutlet weak var orgs_label: UILabel!
+    @IBOutlet var academictap: UITapGestureRecognizer!
+    @IBOutlet var academiclabeltap: UITapGestureRecognizer!
+    @IBOutlet var careertap: UITapGestureRecognizer!
+    @IBOutlet var orgtap: UITapGestureRecognizer!
+    @IBOutlet var sociallabeltap: UITapGestureRecognizer!
+    @IBOutlet var orglabeltap: UITapGestureRecognizer!
+    @IBOutlet var careerlabeltap: UITapGestureRecognizer!
+    @IBOutlet var socialtap: UITapGestureRecognizer!
     @IBAction func academicTapped(_ sender: Any) {
         print("academic tapped")
-        type = "Academic"
-        academics_img.alpha = 0.5
+        if academics_img.alpha == 0.5{
+            academics_img.alpha = 1
+            career_img.alpha = 0.5
+            org_img.alpha = 0.5
+            social_img.alpha = 0.5
+            //academics_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+            type = "Academic"
+            print("type is")
+            print(type)
+        }else{
+            academics_img.alpha = 0.5
+            type = ""
+            print("type is")
+            print(type)
+            //academics_img.tintColor = UIColor.lightGray
+        }
+    }
+    @IBAction func academiclabelTapped(_ sender: Any) {
+        print("academic label tapped")
+        //        let tempImage = academics_img.image?.withRenderingMode(.alwaysTemplate)
+        //        academics_img.image = tempImage
+        if academics_img.alpha == 0.5{
+            academics_img.alpha = 1
+            career_img.alpha = 0.5
+            org_img.alpha = 0.5
+            social_img.alpha = 0.5
+            //academics_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+            type = "Academic"
+            print("type is")
+            print(type)
+        }else{
+            academics_img.alpha = 0.5
+            type = ""
+            print("type is")
+            print(type)
+            //academics_img.tintColor = UIColor.lightGray
+        }
+        
+        
+        
     }
     @IBAction func careerTapped(_ sender: Any) {
         print("career tapped")
-        type = "Career"
+        if career_img.alpha == 0.5{
+            career_img.alpha = 1
+            academics_img.alpha = 0.5
+            org_img.alpha = 0.5
+            social_img.alpha = 0.5
+            //academics_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+            type = "Career"
+            print("type is")
+            print(type)
+        }else{
+            career_img.alpha = 0.5
+            type = ""
+            print("type is")
+            print(type)
+            //academics_img.tintColor = UIColor.lightGray
+        }
+    }
+    @IBAction func careerlabeltapped(_ sender: Any) {
+        print("career label tapped")
+        if career_img.alpha == 0.5{
+            career_img.alpha = 1
+            academics_img.alpha = 0.5
+            org_img.alpha = 0.5
+            social_img.alpha = 0.5
+            //academics_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+            type = "Career"
+            print("type is")
+            print(type)
+        }else{
+            career_img.alpha = 0.5
+            type = ""
+            print("type is")
+            print(type)
+            //academics_img.tintColor = UIColor.lightGray
+        }
     }
     
     @IBAction func orgsTapped(_ sender: Any) {
         print("orgs Tapped")
         type = "Orgs"
+        if org_img.alpha == 0.5{
+            org_img.alpha = 1
+            academics_img.alpha = 0.5
+            career_img.alpha = 0.5
+            social_img.alpha = 0.5
+            //academics_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+            type = "Orgs"
+            print("type is")
+            print(type)
+        }else{
+            org_img.alpha = 0.5
+            type = ""
+            print("type is")
+            print(type)
+            //academics_img.tintColor = UIColor.lightGray
+        }
+    }
+    
+    @IBAction func orglabelTapped(_ sender: Any) {
+        print("orgs label Tapped")
+        if org_img.alpha == 0.5{
+            org_img.alpha = 1
+            academics_img.alpha = 0.5
+            career_img.alpha = 0.5
+            social_img.alpha = 0.5
+            //academics_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+            type = "Orgs"
+            print("type is")
+            print(type)
+        }else{
+            org_img.alpha = 0.5
+            type = ""
+            print("type is")
+            print(type)
+            //academics_img.tintColor = UIColor.lightGray
+        }
     }
     
     @IBAction func socialTapped(_ sender: Any) {
         print("social Tapped")
-        type = "Social"
+        if social_img.alpha == 0.5{
+            social_img.alpha = 1
+            academics_img.alpha = 0.5
+            career_img.alpha = 0.5
+            org_img.alpha = 0.5
+            //academics_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+            type = "Social"
+            print("type is")
+            print(type)
+        }else{
+            social_img.alpha = 0.5
+            type = ""
+            print("type is")
+            print(type)
+            //academics_img.tintColor = UIColor.lightGray
+        }
     }
     
+    @IBAction func sociallabelTapped(_ sender: Any) {
+        print("social label Tapped")
+        if social_img.alpha == 0.5{
+            social_img.alpha = 1
+            academics_img.alpha = 0.5
+            career_img.alpha = 0.5
+            org_img.alpha = 0.5
+            type = "Social"
+            print("type is")
+            print(type)
+            //academics_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+        }else{
+            social_img.alpha = 0.5
+            type = ""
+            print("type is")
+            print(type)
+            //academics_img.tintColor = UIColor.lightGray
+        }
+    }
     
     @IBAction func addEventButton(_ sender: Any) {
         let type2 = type
@@ -96,12 +253,104 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             // 5
             sqlite3_finalize(insertStatement)
         }
-        insert()
+        //if all the even requirements are met
+        var name_requirement = false
+        var type_requirement = false
+        var location_requirement = false
+        var description_requirement = false
+        //name_requirement
+        if eventName.text!.isEmpty{
+            name_requirement = false
+            print("Error: Missing Name")
+        }else{
+            name_requirement = true
+        }
+        
+        //type requirement
+        if type == "" {
+            type_requirement = false
+            print("Error: Missing Type")
+        }else{
+            type_requirement = true
+        }
+        
+        //location requirement
+        if eventLocation.text!.isEmpty{
+            location_requirement = false
+            print("Error: Missing Location")
+        }else{
+            location_requirement = true
+        }
+        //description requirement
+        if descriptionField.text!.isEmpty{
+            description_requirement = false
+            print("Error: Description Field is empty")
+        }else if descriptionField.text.count<30{
+            description_requirement = false
+            print("Error: Description Field must at least 30 characters")
+        }else{
+            description_requirement = true
+        }
+        
+        if name_requirement==true && type_requirement==true && location_requirement==true && description_requirement == true {
+            print("data fields met all the requirements")
+            insert()
+            let ttl = "Review"
+            let msg = "Is your event information correct?"
+            
+            let controller = UIAlertController(title: ttl,
+                                               message:msg, preferredStyle: .alert)
+            
+            
+            let okAction = UIAlertAction(title: "submit",
+                                         style: .default,
+                                         handler: { _ in
+                                            self.addEventButton()
+            })
+            let noAction = UIAlertAction(title: "no",
+                                         style: .cancel,
+                                         handler: nil)
+            
+            controller.addAction(okAction)
+            controller.addAction(noAction)
+            
+            if let ppc = controller.popoverPresentationController {
+                ppc.sourceView = sender as! UIView
+                ppc.sourceRect = (sender as AnyObject).bounds
+            }
+            present(controller, animated: true, completion: nil)
+            if ttl == "Congrats" {
+                performSegue(withIdentifier: "done", sender: self)
+            }
+            
+        }else{
+            print("missing information or data fields not matching the requirements.")
+            
+            
+            let controller = UIAlertController(title: "Return",
+                                               message:"missing information or data fields not matching the requirements.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "cancel",
+                                         style: .cancel,
+                                         handler: nil)
+            
+            controller.addAction(okAction)
+            
+            if let ppc = controller.popoverPresentationController {
+                ppc.sourceView = sender as! UIView
+                ppc.sourceRect = (sender as AnyObject).bounds
+            }
+            present(controller, animated: true, completion: nil)
+        }
 
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    func addEventButton(){
+        insert()
+        performSegue(withIdentifier: "add", sender: self)
     }
     
     
@@ -112,16 +361,20 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         return schoolNames[row]
     }
 
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        academics_img.isUserInteractionEnabled = true
+        academic_label.isUserInteractionEnabled = true
+        career_img.isUserInteractionEnabled=true
+        career_label.isUserInteractionEnabled=true
+        org_img.isUserInteractionEnabled=true
+        orgs_label.isUserInteractionEnabled=true
+        social_img.isUserInteractionEnabled=true
+        social_label.isUserInteractionEnabled=true
     }
     
-    
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Do any additional setup after loading the view.
-//    }
+}
 //
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
@@ -139,4 +392,4 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     */
 
-//}
+

@@ -45,87 +45,121 @@ class FilterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     
     @IBAction func academics_label_tapped(_ sender: Any) {
         print("academic label tapped")
-        //type = "Academic"
+//        let tempImage = academics_img.image?.withRenderingMode(.alwaysTemplate)
+//        academics_img.image = tempImage
         if academics_img.alpha == 0.5{
             academics_img.alpha = 1
+            //academics_img.tintColor = UIColor(red:180,green:180,blue:180,alpha:1)
+            //academics_img.backgroundColor = UIColor.light
             academics_filter = true
             
         }else{
             academics_img.alpha = 0.5
+            //academics_img.backgroundColor = UIColor.clear
             academics_filter = false
+            //academics_img.tintColor = UIColor.lightGray
         }
     }
     @IBAction func academics_tapped(_ sender: Any) {
         print("academic tapped")
-        //type = "Academic"
+//        let tempImage = academics_img.image?.withRenderingMode(.alwaysTemplate)
+//        academics_img.image = tempImage
         if academics_img.alpha == 0.5{
             academics_img.alpha = 1
             academics_filter = true
+            //academics_img.tintColor = UIColor(red:180,green:180,blue:180,alpha:1)
         }else{
             academics_img.alpha = 0.5
             academics_filter = false
+            //academics_img.tintColor = UIColor.lightGray
         }
     }
 
     @IBAction func career_tapped(_ sender: Any) {
         print("career tapped")
-        //type = "Career"
+//        let tempImage = career_img.image?.withRenderingMode(.alwaysTemplate)
+//        career_img.image = tempImage
         if career_img.alpha == 0.5{
             career_img.alpha = 1
             career_filter = true
+            //career_img.tintColor = UIColor(red:230,green:82,blue:72,alpha:1)
         }else{
             career_img.alpha = 0.5
             career_filter = false
+            //career_img.tintColor = UIColor.lightGray
         }
     }
     
     @IBAction func career_label_tapped(_ sender: Any) {
         print("career label tapped")
-        //type = "Career"
+//        let tempImage = career_img.image?.withRenderingMode(.alwaysTemplate)
+//        career_img.image = tempImage
         if career_img.alpha == 0.5{
             career_img.alpha = 1
+            //career_img.tintColor = UIColor(red:230,green:82,blue:72,alpha:1)
             career_filter = true
         }else{
             career_img.alpha = 0.5
             career_filter = false
+            //career_img.tintColor = UIColor.lightGray
         }
         
     }
     @IBAction func orgs_tapped(_ sender: Any) {
         print("orgs tapped")
-        //type = "Orgs"
+//        let tempImage = orgs_img.image?.withRenderingMode(.alwaysTemplate)
+//        orgs_img.image = tempImage
         if orgs_img.alpha == 0.5{
             orgs_img.alpha = 1
+            //orgs_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+            orgs_filter = true
         }else{
             orgs_img.alpha = 0.5
+            orgs_filter = false
+            //orgs_img.tintColor = UIColor.lightGray
         }
     }
     
     @IBAction func orgs_label_tapped(_ sender: Any) {
         print("orgs label tapped")
-        //type = "Orgs"
+//        let tempImage = orgs_img.image?.withRenderingMode(.alwaysTemplate)
+//        orgs_img.image = tempImage
         if orgs_img.alpha == 0.5{
             orgs_img.alpha = 1
+            //orgs_img.tintColor = UIColor(red:31,green:78,blue:114,alpha:1)
+            orgs_filter = true
         }else{
             orgs_img.alpha = 0.5
+            orgs_filter = false
+            //orgs_img.tintColor = UIColor.lightGray
         }
     }
     @IBAction func social_tapped(_ sender: Any) {
         print("social tapped")
-        //type = "Social"
+//        let tempImage = social_img.image?.withRenderingMode(.alwaysTemplate)
+//        social_img.image = tempImage
         if social_img.alpha == 0.5{
             social_img.alpha = 1
+            //social_img.tintColor = UIColor(red:124,green:213,blue:173,alpha:1)
+            social_filter = true
         }else{
             social_img.alpha = 0.5
+            social_filter = false
+            //social_img.tintColor = UIColor.lightGray
         }
     }
     @IBAction func social_label_tapped(_ sender: Any) {
         print("social label tapped")
-        //type = "Social"
+//        let tempImage = social_img.image?.withRenderingMode(.alwaysTemplate)
+//        social_img.image = tempImage
         if social_img.alpha == 0.5{
             social_img.alpha = 1
+            //social_img.tintColor = UIColor(red:124,green:213,blue:173,alpha:1)
+            social_filter = true
         }else{
             social_img.alpha = 0.5
+            social_filter = false
+            //social_img.tintColor = UIColor.lightGray
         }
     }
     private let schoolTypes = [
