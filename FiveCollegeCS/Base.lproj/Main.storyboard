@@ -1120,7 +1120,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="1mb-Fh-4k1" kind="show" id="24q-Hg-zuK"/>
+                                            <segue destination="1mb-Fh-4k1" kind="show" identifier="eventinfo" id="24q-Hg-zuK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
