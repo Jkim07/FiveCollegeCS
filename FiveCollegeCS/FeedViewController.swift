@@ -14,7 +14,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var subtitles = [String]()
 //    let myimages: [UIImage] = [#imageLiteral(resourceName: "careers"),#imageLiteral(resourceName: "social"), #imageLiteral(resourceName: "org"), #imageLiteral(resourceName: "academics")]
 //    let myimages = ["careers":#imageLiteral(resourceName: "careers"),"social":#imageLiteral(resourceName: "social"), "org":#imageLiteral(resourceName: "org"),"academics": #imageLiteral(resourceName: "academics")]
-    let myimages = ["careers":#imageLiteral(resourceName: "careers"),"social":#imageLiteral(resourceName: "social"), "org":#imageLiteral(resourceName: "org"),"academics": #imageLiteral(resourceName: "academics")]
+//    let myimages = ["careers":#imageLiteral(resourceName: "careers"),"social":#imageLiteral(resourceName: "social"), "org":#imageLiteral(resourceName: "org"),"academics": #imageLiteral(resourceName: "academics")]
     var types = [UIImage]()
     
 //    let subtitles = ["04/21 4:20pm\nUMass Auditorium", "04/20 6:00pm\nSmith College CC Room 102", "11/20 7:00pm\nSmith College Lazarus Center", "12/09 8:00pm\nHampshire College",//    "05/09 7:10pm\nMount Holyhoke", "08/14 4:00pm\nMount Holyhoke Library Discussion Room","3/21 6:07pm\nAmherst College Main Dining Hall","07/22 12:00pm\nAmherst College","11/20 7:00pm\nSmith College Ford Hall Room 320"]
@@ -58,7 +58,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     print("Event Title is", eventTitle)
                     print("Subtitle is", subtitle)
 //                    print("Picture Type", )
-                    print("types list printed= ",types)
+//                    print("types list printed= ",types)
                     print("printing data array here", data)
                 }
                 
@@ -91,7 +91,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         //let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = data[indexPath.row]
         cell.detailTextLabel?.text = subtitles[indexPath.row]
-        cell.imageView?.image = types[indexPath.row]
+//        cell.imageView?.image = types[indexPath.row]
 //        cell.imageView?.image = myimages[indexPath.row]
         
         return(cell)
