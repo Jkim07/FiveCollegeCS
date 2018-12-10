@@ -46,23 +46,23 @@ class FilterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBAction func academics_label_tapped(_ sender: Any) {
         print("academic label tapped")
         //type = "Academic"
-        if academics_img.alpha == 0.3{
+        if academics_img.alpha == 0.5{
             academics_img.alpha = 1
             academics_filter = true
             
         }else{
-            academics_img.alpha = 0.3
+            academics_img.alpha = 0.5
             academics_filter = false
         }
     }
     @IBAction func academics_tapped(_ sender: Any) {
         print("academic tapped")
         //type = "Academic"
-        if academics_img.alpha == 0.3{
+        if academics_img.alpha == 0.5{
             academics_img.alpha = 1
             academics_filter = true
         }else{
-            academics_img.alpha = 0.3
+            academics_img.alpha = 0.5
             academics_filter = false
         }
     }
@@ -70,11 +70,11 @@ class FilterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBAction func career_tapped(_ sender: Any) {
         print("career tapped")
         //type = "Career"
-        if career_img.alpha == 0.3{
+        if career_img.alpha == 0.5{
             career_img.alpha = 1
             career_filter = true
         }else{
-            career_img.alpha = 0.3
+            career_img.alpha = 0.5
             career_filter = false
         }
     }
@@ -82,11 +82,11 @@ class FilterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBAction func career_label_tapped(_ sender: Any) {
         print("career label tapped")
         //type = "Career"
-        if career_img.alpha == 0.3{
+        if career_img.alpha == 0.5{
             career_img.alpha = 1
             career_filter = true
         }else{
-            career_img.alpha = 0.3
+            career_img.alpha = 0.5
             career_filter = false
         }
         
@@ -94,38 +94,38 @@ class FilterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBAction func orgs_tapped(_ sender: Any) {
         print("orgs tapped")
         //type = "Orgs"
-        if orgs_img.alpha == 0.3{
+        if orgs_img.alpha == 0.5{
             orgs_img.alpha = 1
         }else{
-            orgs_img.alpha = 0.3
+            orgs_img.alpha = 0.5
         }
     }
     
     @IBAction func orgs_label_tapped(_ sender: Any) {
         print("orgs label tapped")
         //type = "Orgs"
-        if orgs_img.alpha == 0.3{
+        if orgs_img.alpha == 0.5{
             orgs_img.alpha = 1
         }else{
-            orgs_img.alpha = 0.3
+            orgs_img.alpha = 0.5
         }
     }
     @IBAction func social_tapped(_ sender: Any) {
         print("social tapped")
         //type = "Social"
-        if social_img.alpha == 0.3{
+        if social_img.alpha == 0.5{
             social_img.alpha = 1
         }else{
-            social_img.alpha = 0.3
+            social_img.alpha = 0.5
         }
     }
     @IBAction func social_label_tapped(_ sender: Any) {
         print("social label tapped")
         //type = "Social"
-        if social_img.alpha == 0.3{
+        if social_img.alpha == 0.5{
             social_img.alpha = 1
         }else{
-            social_img.alpha = 0.3
+            social_img.alpha = 0.5
         }
     }
     private let schoolTypes = [
