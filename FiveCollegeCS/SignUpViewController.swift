@@ -81,23 +81,78 @@ class SignUpViewController: UIViewController {
         var email_requirement = false
         var password_requirement = false
         
+        //name requirements
         if inputFirstName!.isEmpty && inputLastName!.isEmpty {
             name_requirement = false
         }else{
             name_requirement = true
         }
         
+        //email requirements
+        func isValidEmail(emailID:String) -> Bool {
+            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+            let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            return emailTest.evaluate(with: emailID)
+        }
+        
+        
         if inputEmail!.isEmpty {
             email_requirement = false
         }else{
-        email_requirement = true
+            //check if email is a five college email
+            if (inputEmail?.contains("@smith.edu"))! {
+                print("I found: @smith.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+            }
+            if (inputEmail?.contains("@umass.edu"))! {
+                print("I found: @umass.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+            }
+            if (inputEmail?.contains("@hampshire.edu"))! {
+                print("I found: @hampshire.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+            }
+            if (inputEmail?.contains("@amherst.edu"))! {
+                print("I found: @amherst.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+            }
+            if (inputEmail?.contains("@mtholyoke.edu"))! {
+                print("I found: @mtholyoke.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+            }
+            if isValidEmail(emailID:inputEmail!) == false{
+                email_requirement  = false
+                print("This is not a valid email address.")
+            }
+        }
+        
+        //password requirements
+        func isValidPassword(testStr:String?) -> Bool {
+            guard testStr != nil else { return false }
+            // at least one uppercase,
+            // at least one digit
+            // at least one lowercase
+            // 8 characters total
+            let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+            return passwordTest.evaluate(with: testStr)
         }
         
         if inputPassword!.isEmpty {
             password_requirement = false
+        }else if isValidPassword(testStr:inputPassword!) == false{
+            password_requirement  = false
+            print("This is not a valid password.")
         }else{
             password_requirement = true
+            print(inputPassword)
+            print("This is a valid password.")
         }
+        
         //if the information meets all the requirements, insert the information
         if name_requirement==true && email_requirement==true && password_requirement==true {
             print("data fields met all the requirements")
@@ -146,42 +201,7 @@ class SignUpViewController: UIViewController {
             present(controller, animated: true, completion: nil)
         }
 
-//        let ttl = self.firstNameInput.text!.isEmpty
-//            ? "Return"
-//            : "Congrats"
-//
-//        let msg = self.firstNameInput.text!.isEmpty
-//            ? "You are not meeting the sign up requirements."
-//            : "You've successfully signed up."
-//
-////        let styl = self.firstNameInput.text!.isEmpty
-////            ? .cancel
-////            : .default
-//
-//        let controller = UIAlertController(title: ttl,
-//                                           message:msg, preferredStyle: .alert)
-//
-//
-//        let okAction = UIAlertAction(title: "OK",
-//                                         style: .default,
-//                                         handler: { _ in
-//                                            self.performSegue(withIdentifier: "done", sender: self)
-//        })
-//
-//
-//
-//
-//
-//        controller.addAction(okAction)
-//
-//        if let ppc = controller.popoverPresentationController {
-//            ppc.sourceView = sender as! UIView
-//            ppc.sourceRect = (sender as AnyObject).bounds
-//        }
-//        present(controller, animated: true, completion: nil)
-//        if ttl == "Congrats" {
-//            performSegue(withIdentifier: "done", sender: self)
-//        }
+
     }
     
 //    override func viewDidLoad() {
