@@ -1293,62 +1293,94 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="academics" translatesAutoresizingMaskIntoConstraints="NO" id="r5q-KM-0FB">
                                 <rect key="frame" x="41" y="148" width="44" height="44"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ibZ-AX-HyM"/>
                                     <constraint firstAttribute="width" constant="44" id="x70-MV-ujH"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pRa-h9-5Rk" appends="YES" id="xj7-b3-6kF"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="careers" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-FP-kXI">
                                 <rect key="frame" x="121" y="147" width="42" height="42"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="NeB-8c-KEF"/>
                                     <constraint firstAttribute="width" constant="42" id="jKc-6h-WSk"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Aet-rh-Wa0" appends="YES" id="hfp-HI-vX7"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="org" translatesAutoresizingMaskIntoConstraints="NO" id="yvH-p8-Lbt">
                                 <rect key="frame" x="198" y="149" width="56" height="40"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="HvQ-1a-zEI"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="JvF-3d-eZG"/>
                                     <constraint firstAttribute="width" constant="56" id="cfx-Zd-psY"/>
                                     <constraint firstAttribute="height" constant="40" id="yCg-XT-pbj"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tnG-ek-Sal" appends="YES" id="Fsc-ad-Qwx"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social" translatesAutoresizingMaskIntoConstraints="NO" id="V6N-Wa-syK">
                                 <rect key="frame" x="276" y="149" width="63" height="38"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="8od-CX-MBZ"/>
                                     <constraint firstAttribute="height" constant="38" id="EGb-4w-rVs"/>
                                     <constraint firstAttribute="width" constant="63" id="WGL-tI-398"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="e7K-hg-iSW"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LV2-Xr-y80" appends="YES" id="vS9-HY-5td"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Academic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyL-Z5-Fjl">
                                 <rect key="frame" x="35" y="198" width="56" height="15"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="bD5-SW-AeK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.66949379279999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Qva-RR-8Pq" appends="YES" id="Jen-O4-E8R"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orgs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mso-UB-WGq">
                                 <rect key="frame" x="212" y="198" width="28" height="15"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.66949379279999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9DZ-R3-b26" appends="YES" id="Cvc-jn-zDC"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzN-DS-7yy">
                                 <rect key="frame" x="290" y="198" width="35" height="15"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.66949379279999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IsO-oV-PfN" appends="YES" id="uLT-xs-Agd"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Career" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JF-So-dVD">
                                 <rect key="frame" x="123" y="198" width="38" height="15"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.66949379279999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SL2-EM-dTI" appends="YES" id="JUk-Ho-CdX"/>
+                                </connections>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmD-mK-Tbe">
                                 <rect key="frame" x="26" y="258" width="322" height="160"/>
@@ -1444,12 +1476,67 @@
                     </view>
                     <connections>
                         <outlet property="academics_img" destination="r5q-KM-0FB" id="lue-3Z-T4S"/>
+                        <outlet property="academics_label" destination="KyL-Z5-Fjl" id="pCq-7l-4R4"/>
+                        <outlet property="academics_label_tap" destination="Qva-RR-8Pq" id="7c9-6W-ueo"/>
+                        <outlet property="academics_tap" destination="pRa-h9-5Rk" id="W9m-rG-KGr"/>
+                        <outlet property="career_img" destination="WJo-FP-kXI" id="jbK-gS-l1Q"/>
+                        <outlet property="career_label" destination="5JF-So-dVD" id="rCt-Py-BAj"/>
+                        <outlet property="career_label_tap" destination="SL2-EM-dTI" id="11B-oH-0Rl"/>
+                        <outlet property="career_tap" destination="Aet-rh-Wa0" id="dsF-87-nzH"/>
                         <outlet property="collegePicker" destination="AmD-mK-Tbe" id="Oap-jv-w5b"/>
                         <outlet property="filterButton" destination="wgd-6R-7XK" id="jHc-8K-7x2"/>
+                        <outlet property="orgs_img" destination="yvH-p8-Lbt" id="WbF-a1-bva"/>
+                        <outlet property="orgs_label" destination="mso-UB-WGq" id="NIB-O9-B4D"/>
+                        <outlet property="orgs_label_tap" destination="9DZ-R3-b26" id="IO2-e4-Tbk"/>
+                        <outlet property="orgs_tap" destination="tnG-ek-Sal" id="OeF-92-Bak"/>
                         <outlet property="selectedCollegeLabel" destination="kXa-6V-BOn" id="74w-eM-1pV"/>
+                        <outlet property="social_img" destination="V6N-Wa-syK" id="R35-ZY-dTJ"/>
+                        <outlet property="social_label" destination="MzN-DS-7yy" id="bYY-Tg-5eV"/>
+                        <outlet property="social_label_tap" destination="IsO-oV-PfN" id="Ya2-bH-gtK"/>
+                        <outlet property="social_tap" destination="LV2-Xr-y80" id="nqB-st-QuX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocV-gG-GIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pRa-h9-5Rk">
+                    <connections>
+                        <action selector="academics_tapped:" destination="Pzw-Yp-PVA" id="iN2-ju-jOB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Qva-RR-8Pq">
+                    <connections>
+                        <action selector="academics_label_tapped:" destination="Pzw-Yp-PVA" id="fmB-TD-LnR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="SL2-EM-dTI">
+                    <connections>
+                        <action selector="career_label_tapped:" destination="Pzw-Yp-PVA" id="jdF-YO-6g9"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="tnG-ek-Sal">
+                    <connections>
+                        <action selector="orgs_tapped:" destination="Pzw-Yp-PVA" id="7Cd-1E-uKT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="9DZ-R3-b26">
+                    <connections>
+                        <action selector="orgs_label_tapped:" destination="Pzw-Yp-PVA" id="geP-Yb-9b9"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="LV2-Xr-y80">
+                    <connections>
+                        <action selector="social_tapped:" destination="Pzw-Yp-PVA" id="PVX-Kv-KOJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="IsO-oV-PfN">
+                    <connections>
+                        <action selector="social_label_tapped:" destination="Pzw-Yp-PVA" id="XBs-si-mEe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Aet-rh-Wa0">
+                    <connections>
+                        <action selector="career_tapped:" destination="Pzw-Yp-PVA" id="veb-fp-gTA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3773.5999999999999" y="132.68365817091455"/>
         </scene>
