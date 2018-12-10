@@ -48,8 +48,26 @@ class SignUpViewController: UIViewController {
 //                    print(pass)
 //                    print(first)
 //                    print(last)
+                    
                 } else {
                     print("Could not insert row.")
+                    let ttl = "Return"
+                    let msg = "An error has occured while we were processing your request."
+
+                    let controller = UIAlertController(title: ttl,
+                                                       message:msg, preferredStyle: .alert)
+                    
+                    let okAction = UIAlertAction(title: "cancel",
+                                                 style: .cancel,
+                                                 handler: nil)
+                    
+                    controller.addAction(okAction)
+                    
+                    if let ppc = controller.popoverPresentationController {
+                        ppc.sourceView = sender as! UIView
+                        ppc.sourceRect = (sender as AnyObject).bounds
+                    }
+                    present(controller, animated: true, completion: nil)
                 }
             } else {
                 print("INSERT statement could not be prepared.")
@@ -57,8 +75,113 @@ class SignUpViewController: UIViewController {
             // 5
             sqlite3_finalize(insertStatement)
         }
-        insert()
         
+        //set sign up information requirements
+        var name_requirement = false
+        var email_requirement = false
+        var password_requirement = false
+        
+        if inputFirstName!.isEmpty && inputLastName!.isEmpty {
+            name_requirement = false
+        }else{
+            name_requirement = true
+        }
+        
+        if inputEmail!.isEmpty {
+            email_requirement = false
+        }else{
+        email_requirement = true
+        }
+        
+        if inputPassword!.isEmpty {
+            password_requirement = false
+        }else{
+            password_requirement = true
+        }
+        //if the information meets all the requirements, insert the information
+        if name_requirement==true && email_requirement==true && password_requirement==true {
+            print("data fields met all the requirements")
+            insert()
+            let ttl = "Congrats"
+            let msg = "You've successfully signed up."
+            
+            let controller = UIAlertController(title: ttl,
+                                               message:msg, preferredStyle: .alert)
+            
+            
+            let okAction = UIAlertAction(title: "OK",
+                                         style: .default,
+                                         handler: { _ in
+                                            self.performSegue(withIdentifier: "done", sender: self)
+            })
+            
+            controller.addAction(okAction)
+            
+            if let ppc = controller.popoverPresentationController {
+                ppc.sourceView = sender as! UIView
+                ppc.sourceRect = (sender as AnyObject).bounds
+            }
+            present(controller, animated: true, completion: nil)
+            if ttl == "Congrats" {
+                performSegue(withIdentifier: "done", sender: self)
+            }
+            
+        }else{
+            print("missing information or data fields not matching the requirements.")
+
+            
+            let controller = UIAlertController(title: "Return",
+                                               message:"missing information or data fields not matching the requirements.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "cancel",
+                                         style: .cancel,
+                                         handler: nil)
+            
+            controller.addAction(okAction)
+            
+            if let ppc = controller.popoverPresentationController {
+                ppc.sourceView = sender as! UIView
+                ppc.sourceRect = (sender as AnyObject).bounds
+            }
+            present(controller, animated: true, completion: nil)
+        }
+
+//        let ttl = self.firstNameInput.text!.isEmpty
+//            ? "Return"
+//            : "Congrats"
+//
+//        let msg = self.firstNameInput.text!.isEmpty
+//            ? "You are not meeting the sign up requirements."
+//            : "You've successfully signed up."
+//
+////        let styl = self.firstNameInput.text!.isEmpty
+////            ? .cancel
+////            : .default
+//
+//        let controller = UIAlertController(title: ttl,
+//                                           message:msg, preferredStyle: .alert)
+//
+//
+//        let okAction = UIAlertAction(title: "OK",
+//                                         style: .default,
+//                                         handler: { _ in
+//                                            self.performSegue(withIdentifier: "done", sender: self)
+//        })
+//
+//
+//
+//
+//
+//        controller.addAction(okAction)
+//
+//        if let ppc = controller.popoverPresentationController {
+//            ppc.sourceView = sender as! UIView
+//            ppc.sourceRect = (sender as AnyObject).bounds
+//        }
+//        present(controller, animated: true, completion: nil)
+//        if ttl == "Congrats" {
+//            performSegue(withIdentifier: "done", sender: self)
+//        }
     }
     
 //    override func viewDidLoad() {

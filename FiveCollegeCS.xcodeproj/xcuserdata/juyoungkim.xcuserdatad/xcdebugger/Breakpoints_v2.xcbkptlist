@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FiveCollegeCS/LoginViewController.swift"
-            timestampString = "565679602.575241"
+            timestampString = "566096640.2887861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -26,13 +26,91 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FiveCollegeCS/LoginViewController.swift"
-            timestampString = "565679602.575362"
+            timestampString = "566096640.28888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
             landmarkName = "LoginViewController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiveCollegeCS/AddViewController.swift"
+            timestampString = "566096640.2889611"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "AddViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FiveCollegeCS.AddViewController.eventName.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "FiveCollegeCS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juyoungkim/Documents/Beta%20App/FiveCollegeCS/FiveCollegeCS/AddViewController.swift"
+                  timestampString = "566096640.507219"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FiveCollegeCS.AddViewController.eventName.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "FiveCollegeCS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juyoungkim/Documents/Beta%20App/FiveCollegeCS/FiveCollegeCS/AddViewController.swift"
+                  timestampString = "566096640.510003"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FiveCollegeCS.AddViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; FiveCollegeCS.AddViewController"
+                  moduleName = "FiveCollegeCS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juyoungkim/Documents/Beta%20App/FiveCollegeCS/FiveCollegeCS/AddViewController.swift"
+                  timestampString = "566096640.512624"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "850">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FiveCollegeCS.AddViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;FiveCollegeCS.AddViewController&gt;"
+                  moduleName = "FiveCollegeCS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juyoungkim/Documents/Beta%20App/FiveCollegeCS/FiveCollegeCS/AddViewController.swift"
+                  timestampString = "566096640.515087"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "773">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
