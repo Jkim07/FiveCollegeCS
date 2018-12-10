@@ -1096,7 +1096,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="1mb-Fh-4k1" kind="show" id="24q-Hg-zuK"/>
+                                            <segue destination="1mb-Fh-4k1" kind="show" identifier="eventinfo" id="24q-Hg-zuK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1439,8 +1439,9 @@
         <image name="social" width="200" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HKO-Iq-2MN"/>
         <segue reference="x4t-my-hgL"/>
-        <segue reference="tlZ-Iz-dGi"/>
+        <segue reference="9tV-Xw-9Va"/>
         <segue reference="iPR-Hp-Isj"/>
         <segue reference="Xac-Fd-YBZ"/>
     </inferredMetricsTieBreakers>
