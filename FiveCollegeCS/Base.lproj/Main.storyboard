@@ -1015,6 +1015,7 @@
                     </view>
                     <connections>
                         <outlet property="CollegePicker" destination="saj-Bx-IK2" id="Wet-Ey-9La"/>
+                        <outlet property="academics_img" destination="rnG-Sj-70b" id="0wU-EA-LjU"/>
                         <outlet property="dateAndTime" destination="blc-f5-27I" id="GWe-rn-87h"/>
                         <outlet property="descriptionField" destination="OcW-6M-9hG" id="by5-7k-OJS"/>
                         <outlet property="eventLocation" destination="TS1-yI-80l" id="iF0-1e-N0O"/>
@@ -1442,6 +1443,7 @@
                         <viewLayoutGuide key="safeArea" id="jK0-of-Tj6"/>
                     </view>
                     <connections>
+                        <outlet property="academics_img" destination="r5q-KM-0FB" id="lue-3Z-T4S"/>
                         <outlet property="collegePicker" destination="AmD-mK-Tbe" id="Oap-jv-w5b"/>
                         <outlet property="filterButton" destination="wgd-6R-7XK" id="jHc-8K-7x2"/>
                         <outlet property="selectedCollegeLabel" destination="kXa-6V-BOn" id="74w-eM-1pV"/>
@@ -1462,7 +1464,7 @@
         <image name="social" width="200" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UOi-1R-TDf"/>
+        <segue reference="DKC-HV-brk"/>
         <segue reference="tlZ-Iz-dGi"/>
         <segue reference="iPR-Hp-Isj"/>
         <segue reference="kgy-p7-16L"/>

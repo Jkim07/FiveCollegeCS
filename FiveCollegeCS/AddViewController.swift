@@ -21,9 +21,12 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var dateAndTime: UIDatePicker!
     @IBOutlet weak var descriptionField: UITextView!
         
+    @IBOutlet weak var academics_img: UIImageView!
+    
     @IBAction func academicTapped(_ sender: Any) {
         print("academic tapped")
         type = "Academic"
+        academics_img.alpha = 0.5
     }
     @IBAction func careerTapped(_ sender: Any) {
         print("career tapped")

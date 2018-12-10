@@ -13,6 +13,8 @@ class FilterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var collegePicker: UIPickerView!
     @IBOutlet weak var selectedCollegeLabel: UILabel!
     
+    @IBOutlet weak var academics_img: UIImageView!
+    
     @IBOutlet weak var filterButton: UIButton!
     private let schoolComponent = 0
     
