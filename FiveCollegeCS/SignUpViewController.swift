@@ -12,6 +12,8 @@ class SignUpViewController: UIViewController {
     //var email:String = ""
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var emailValidationLabel: UILabel!
+    @IBOutlet weak var passwordValidationLabel: UILabel!
     
     @IBOutlet weak var firstNameInput: UITextField!
     @IBOutlet weak var lastNameInput: UITextField!
@@ -98,36 +100,45 @@ class SignUpViewController: UIViewController {
         
         if inputEmail!.isEmpty {
             email_requirement = false
+            emailValidationLabel.isHidden = false
+            emailValidationLabel.text = "Please enter your email"
         }else{
             //check if email is a five college email
             if (inputEmail?.contains("@smith.edu"))! {
                 print("I found: @smith.edu")
                 print(inputEmail as Any)
                 email_requirement = true
+                emailValidationLabel.isHidden = true
             }
             if (inputEmail?.contains("@umass.edu"))! {
                 print("I found: @umass.edu")
                 print(inputEmail as Any)
                 email_requirement = true
+                emailValidationLabel.isHidden = true
             }
             if (inputEmail?.contains("@hampshire.edu"))! {
                 print("I found: @hampshire.edu")
                 print(inputEmail as Any)
                 email_requirement = true
+                emailValidationLabel.isHidden = true
             }
             if (inputEmail?.contains("@amherst.edu"))! {
                 print("I found: @amherst.edu")
                 print(inputEmail as Any)
                 email_requirement = true
+                emailValidationLabel.isHidden = true
             }
             if (inputEmail?.contains("@mtholyoke.edu"))! {
                 print("I found: @mtholyoke.edu")
                 print(inputEmail as Any)
                 email_requirement = true
+                emailValidationLabel.isHidden = true
             }
             if isValidEmail(emailID:inputEmail!) == false{
                 email_requirement  = false
-                print("This is not a valid email address.")
+                emailValidationLabel.isHidden = false
+                emailValidationLabel.text = "Please enter a valid five college email address"
+                print("This is not a valid five college email address.")
             }
         }
         
@@ -144,9 +155,13 @@ class SignUpViewController: UIViewController {
         
         if inputPassword!.isEmpty {
             password_requirement = false
+            passwordValidationLabel.isHidden = false
+            passwordValidationLabel.text = "Please enter your password"
         }else if isValidPassword(testStr:inputPassword!) == false{
             password_requirement  = false
-            print("This is not a valid password.")
+            passwordValidationLabel.isHidden = false
+            passwordValidationLabel.text = "Passwords must have at lease one uppercase letter and must be at least 8 characters"
+            print("This is not a valid password")
         }else{
             password_requirement = true
             print(inputPassword)
@@ -204,14 +219,17 @@ class SignUpViewController: UIViewController {
 
     }
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emailValidationLabel.isHidden = true
+        passwordValidationLabel.isHidden = true
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
 
     /*

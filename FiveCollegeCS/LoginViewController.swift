@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var loginValidationLabel: UILabel!
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         let inputEmail=email.text
@@ -43,23 +44,34 @@ class LoginViewController: UIViewController {
                 } else {
                     print("Query returned no results")
                     //loginButton0.isEnabled = false
-    
+                    loginValidationLabel.isHidden = false
+                    loginValidationLabel.text = "Enter a valid email and password combination"
                 }
             } else {
                 print("SELECT statement could not be prepared")
+                loginValidationLabel.isHidden = false
+                loginValidationLabel.text = "error"
+                
             }
             
             // 6
             sqlite3_finalize(queryStatement)
         }
+        if inputEmail!.isEmpty{
+            loginValidationLabel.isHidden = false
+            loginValidationLabel.text = "Enter your account email"
+        }else if inputPassword!.isEmpty{
+            loginValidationLabel.isHidden = false
+            loginValidationLabel.text = "Enter your account password"
+        }else{
         query()
+        }
     }
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loginValidationLabel.isHidden = true
+    }
 //
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
