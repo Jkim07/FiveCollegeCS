@@ -12,6 +12,8 @@ class SignUpViewController: UIViewController {
     //var email:String = ""
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var emailValidationLabel: UILabel!
+    @IBOutlet weak var passwordValidationLabel: UILabel!
     
     @IBOutlet weak var firstNameInput: UITextField!
     @IBOutlet weak var lastNameInput: UITextField!
@@ -48,8 +50,26 @@ class SignUpViewController: UIViewController {
 //                    print(pass)
 //                    print(first)
 //                    print(last)
+                    
                 } else {
                     print("Could not insert row.")
+                    let ttl = "Return"
+                    let msg = "An error has occured while we were processing your request."
+
+                    let controller = UIAlertController(title: ttl,
+                                                       message:msg, preferredStyle: .alert)
+                    
+                    let okAction = UIAlertAction(title: "cancel",
+                                                 style: .cancel,
+                                                 handler: nil)
+                    
+                    controller.addAction(okAction)
+                    
+                    if let ppc = controller.popoverPresentationController {
+                        ppc.sourceView = sender as! UIView
+                        ppc.sourceRect = (sender as AnyObject).bounds
+                    }
+                    present(controller, animated: true, completion: nil)
                 }
             } else {
                 print("INSERT statement could not be prepared.")
@@ -57,18 +77,159 @@ class SignUpViewController: UIViewController {
             // 5
             sqlite3_finalize(insertStatement)
         }
-        insert()
         
+        //set sign up information requirements
+        var name_requirement = false
+        var email_requirement = false
+        var password_requirement = false
+        
+        //name requirements
+        if inputFirstName!.isEmpty && inputLastName!.isEmpty {
+            name_requirement = false
+        }else{
+            name_requirement = true
+        }
+        
+        //email requirements
+        func isValidEmail(emailID:String) -> Bool {
+            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+            let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            return emailTest.evaluate(with: emailID)
+        }
+        
+        
+        if inputEmail!.isEmpty {
+            email_requirement = false
+            emailValidationLabel.isHidden = false
+            emailValidationLabel.text = "Please enter your email"
+        }else{
+            //check if email is a five college email
+            if (inputEmail?.contains("@smith.edu"))! {
+                print("I found: @smith.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+                emailValidationLabel.isHidden = true
+            }
+            if (inputEmail?.contains("@umass.edu"))! {
+                print("I found: @umass.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+                emailValidationLabel.isHidden = true
+            }
+            if (inputEmail?.contains("@hampshire.edu"))! {
+                print("I found: @hampshire.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+                emailValidationLabel.isHidden = true
+            }
+            if (inputEmail?.contains("@amherst.edu"))! {
+                print("I found: @amherst.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+                emailValidationLabel.isHidden = true
+            }
+            if (inputEmail?.contains("@mtholyoke.edu"))! {
+                print("I found: @mtholyoke.edu")
+                print(inputEmail as Any)
+                email_requirement = true
+                emailValidationLabel.isHidden = true
+            }
+            if isValidEmail(emailID:inputEmail!) == false{
+                email_requirement  = false
+                emailValidationLabel.isHidden = false
+                emailValidationLabel.text = "Please enter a valid five college email address"
+                print("This is not a valid five college email address.")
+            }
+        }
+        
+        //password requirements
+        func isValidPassword(testStr:String?) -> Bool {
+            guard testStr != nil else { return false }
+            // at least one uppercase,
+            // at least one digit
+            // at least one lowercase
+            // 8 characters total
+            let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+            return passwordTest.evaluate(with: testStr)
+        }
+        
+        if inputPassword!.isEmpty {
+            password_requirement = false
+            passwordValidationLabel.isHidden = false
+            passwordValidationLabel.text = "Please enter your password"
+        }else if isValidPassword(testStr:inputPassword!) == false{
+            password_requirement  = false
+            passwordValidationLabel.isHidden = false
+            passwordValidationLabel.text = "Passwords must have at lease one uppercase letter and must be at least 8 characters"
+            print("This is not a valid password")
+        }else{
+            password_requirement = true
+            print(inputPassword)
+            print("This is a valid password.")
+        }
+        
+        //if the information meets all the requirements, insert the information
+        if name_requirement==true && email_requirement==true && password_requirement==true {
+            print("data fields met all the requirements")
+            insert()
+            let ttl = "Congrats"
+            let msg = "You've successfully signed up."
+            
+            let controller = UIAlertController(title: ttl,
+                                               message:msg, preferredStyle: .alert)
+            
+            
+            let okAction = UIAlertAction(title: "OK",
+                                         style: .default,
+                                         handler: { _ in
+                                            self.performSegue(withIdentifier: "done", sender: self)
+            })
+            
+            controller.addAction(okAction)
+            
+            if let ppc = controller.popoverPresentationController {
+                ppc.sourceView = sender as! UIView
+                ppc.sourceRect = (sender as AnyObject).bounds
+            }
+            present(controller, animated: true, completion: nil)
+            if ttl == "Congrats" {
+                performSegue(withIdentifier: "done", sender: self)
+            }
+            
+        }else{
+            print("missing information or data fields not matching the requirements.")
+
+            
+            let controller = UIAlertController(title: "Return",
+                                               message:"missing information or data fields not matching the requirements.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "cancel",
+                                         style: .cancel,
+                                         handler: nil)
+            
+            controller.addAction(okAction)
+            
+            if let ppc = controller.popoverPresentationController {
+                ppc.sourceView = sender as! UIView
+                ppc.sourceRect = (sender as AnyObject).bounds
+            }
+            present(controller, animated: true, completion: nil)
+        }
+
+
     }
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emailValidationLabel.isHidden = true
+        passwordValidationLabel.isHidden = true
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
 
     /*
